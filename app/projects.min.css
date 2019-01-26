@@ -1,20 +1,18 @@
-.social {
-  margin: 0;
-  padding: 0; }
-  .social::after {
-    display: block;
-    content: "";
-    clear: both; }
-  .social__item {
-    float: left;
-    list-style-type: none;
-    margin-left: 24px; }
-    .social__item:first-child {
-      margin-left: 0; }
-  .social__link {
-    display: block;
-    width: 47px;
-    height: 47px; }
+.social::after {
+  display: block;
+  content: "";
+  clear: both; }
+
+.social__item {
+  float: left;
+  margin-left: 24px; }
+  .social__item:first-child {
+    margin-left: 0; }
+
+.social__link {
+  display: block;
+  width: 47px;
+  height: 47px; }
 
 .icon--vk {
   background: url("./img/social_icon_sprites.png") -10px -10px; }
@@ -37,7 +35,8 @@
     background: url("./img/social_icon_sprites.png") -10px -343px; }
 
 .header {
-  background-color: #eff3f7; }
+  background-color: #eff3f7;
+  margin-bottom: 39px; }
   .header::after {
     content: '';
     display: block;
@@ -60,3 +59,54 @@
 
 .social {
   float: right; }
+
+.menu {
+  border-radius: 4px;
+  overflow: hidden;
+  background: #eff3f7;
+  font-size: 21px; }
+  .menu__item {
+    color: #959aa8; }
+    .menu__item::before {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 90%;
+      margin: 0 auto;
+      background-color: #3ba8c0; }
+    .menu__item:first-child:before {
+      display: none; }
+    .menu__item:hover:not(.active) {
+      color: #3ba8c0; }
+    .menu__item.active {
+      background: #3ba8c0;
+      margin-bottom: -2px;
+      color: #ffffff; }
+  .menu__link {
+    display: block;
+    padding: 27px 0 27px 28px; }
+
+.contacts {
+  font-size: 17px;
+  color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden; }
+  .contacts__item {
+    padding: 10px 0 10px 43px; }
+    .contacts__item.item-1 {
+      background: #3ba8c0;
+      font-size: 21px;
+      color: #fbfcfd;
+      padding: 14px 0 10px 21px; }
+    .contacts__item.item-2 {
+      background: #41b9d4; }
+    .contacts__item.item-3 {
+      background: #48cbe8; }
+    .contacts__item.item-4 {
+      background: #51daf8; }
+  .contacts__link {
+    display: block; }
+    .contacts__link-text {
+      margin-left: 10px; }
+    .contacts__link:hover > .contacts__link-text {
+      text-decoration: underline; }

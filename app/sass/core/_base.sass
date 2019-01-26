@@ -12,6 +12,7 @@ body
 	min-height: 100%
 	max-width: $site_width
 	margin: 0 auto
+	padding-bottom: 81px
 	margin-bottom: -81px
 
 a
@@ -27,3 +28,25 @@ img
 	width: 100%
 	height: auto
 	outline: none
+
+ul
+	margin: 0
+	padding: 0
+	li
+		list-style: none
+
+.wrapper
+	max-width: $content_width
+	margin: 0 auto
+	+clearfix
+
+.aside
+	width: 250px
+	float: left
+	&__menu,
+	&__contacts
+		margin-bottom: 23px
+
+.main
+	width: 650px
+	float: right

@@ -414,6 +414,7 @@ body {
   min-height: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  padding-bottom: 81px;
   margin-bottom: -81px; }
 
 a {
@@ -429,6 +430,30 @@ img {
   width: 100%;
   height: auto;
   outline: none; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+  ul li {
+    list-style: none; }
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto; }
+  .wrapper::after {
+    display: block;
+    content: "";
+    clear: both; }
+
+.aside {
+  width: 250px;
+  float: left; }
+  .aside__menu, .aside__contacts {
+    margin-bottom: 23px; }
+
+.main {
+  width: 650px;
+  float: right; }
 
 .footer {
   background-color: #eff3f7;
