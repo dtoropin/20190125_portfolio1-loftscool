@@ -1,0 +1,20 @@
+@import '../blocks/_social.sass'
+	
+.header
+	background-color: $bg_blocks
+	&::after
+		+gradientLine
+
+	&__wrap
+		+clearfix
+		max-width: 1200px
+		margin: 0 auto
+		padding: 35px 0 37px
+
+.logo
+	float: left
+	&__img
+		width: 243px
+
+.social
+	float: right

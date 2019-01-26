@@ -1,9 +1,29 @@
+html, body
+	height: 100%
+
 body
+	overflow-y: scroll
 	font-family: $firasans_book
 	font-size: 15px
 	color: $base_color
 	background-image: url(./img/background.png)
 
 .content
-	max-width: 1400px
+	min-height: 100%
+	max-width: $content_width
 	margin: 0 auto
+	margin-bottom: -81px
+
+a
+	outline: none
+	color: inherit
+	text-decoration: none
+
+p
+	margin: 0
+	padding: 0
+
+img
+	width: 100%
+	height: auto
+	outline: none
