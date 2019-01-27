@@ -458,6 +458,29 @@ ul {
     margin-bottom: 26px;
     overflow: hidden; }
 
+.btn {
+  color: #ffffff;
+  font-size: 19px;
+  line-height: 19px;
+  padding: 8px 21px 5px;
+  background-color: #48cbe8;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 3px 1px #3ba8c0;
+  outline: none; }
+  .btn:active {
+    padding: 9px 21px 4px;
+    background-color: #3ba8c0; }
+
+.btn-sites {
+  color: #eff3f7;
+  font-size: 12px;
+  line-height: 12px;
+  text-decoration: none;
+  padding: 5px 6px;
+  border: 2.5px solid #eff3f7;
+  border-radius: 4px; }
+
 .footer {
   background-color: #eff3f7;
   max-width: 1400px;
