@@ -290,6 +290,31 @@
       height: 25px;
       background: url(./img/close.png) no-repeat bottom left; }
 
+.alertError {
+  padding: 15px 21px 0;
+  display: none; }
+  .alertError__text {
+    position: relative;
+    background-color: rgba(249, 126, 118, 0.33);
+    border: 1px solid #f97e76;
+    border-radius: 4px;
+    margin: 0 auto;
+    color: #f97e76; }
+  .alertError__head {
+    font-size: 25px;
+    padding: 10px 10px 5px;
+    margin: 0; }
+  .alertError__mes {
+    padding: 5px 10px 10px; }
+  .alertError__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    display: block;
+    height: 11px;
+    cursor: pointer; }
+
 .alertAdd {
   position: absolute;
   top: 50%;
