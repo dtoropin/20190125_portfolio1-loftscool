@@ -25,6 +25,8 @@ gulp.task('browser-sync', function () {
 gulp.task('js', function () {
 	return gulp.src([
 		'node_modules/jquery/dist/jquery.js',
+		'app/libs/jquery.bpopup.min.js',
+		'app/libs/qTip/jquery.qtip.min.js',
 		'app/js/common.js' // Всегда в конце
 	])
 		.pipe(concat('scripts.min.js'))

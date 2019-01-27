@@ -1,4 +1,4 @@
-// for modal
+// for modal formAddProject
 var fileUpload = (function () {
 
 	var file_api = (window.File && window.FileReader && window.FileList && window.Blob) ? true : false;
