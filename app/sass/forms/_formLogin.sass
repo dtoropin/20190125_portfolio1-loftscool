@@ -13,14 +13,12 @@
 		font-size: 17px
 		line-height: 17px
 		background-color: white
-		border: 1px solid #48cbe8
-		border-radius: 4px
+		+inputBorder
 		padding: 17px 20px 16px
 		outline: none
 		margin-bottom: 24px
+		&::placeholder
+			color: #48cbe8
 		&.error
 			background-color: rgba(249, 126, 118, 0.33)
 			border: 1px solid #f97e76
-		&::placeholder
-			color: #48cbe8
-			// font-size: 17px

@@ -39,8 +39,8 @@
     padding: 17px 20px 16px;
     outline: none;
     margin-bottom: 24px; }
+    .formLogin__name::placeholder, .formLogin__pass::placeholder {
+      color: #48cbe8; }
     .formLogin__name.error, .formLogin__pass.error {
       background-color: rgba(249, 126, 118, 0.33);
       border: 1px solid #f97e76; }
-    .formLogin__name::placeholder, .formLogin__pass::placeholder {
-      color: #48cbe8; }
