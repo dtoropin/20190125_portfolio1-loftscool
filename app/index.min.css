@@ -158,3 +158,23 @@
     border-radius: 3px;
     padding: 0 14px;
     overflow: hidden; }
+
+.block-text {
+  margin-bottom: 22px;
+  padding-left: 66px;
+  color: #4a545d; }
+  .block-text--briefcase {
+    background: url(./img/briefcase.png) no-repeat 0% 2px; }
+  .block-text--cap {
+    background: url(./img/cap.png) no-repeat 0% 2px; }
+  .block-text--doc {
+    background: url(./img/doc.png) no-repeat 11px 2px; }
+  .block-text__denotation {
+    font-size: 17px; }
+  .block-text__description {
+    font-family: "firasans-light", sans-serif; }
+
+.experience {
+  margin-bottom: 23px; }
+  .experience__block {
+    padding: 0 10px 23px 58px; }
