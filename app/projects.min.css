@@ -110,3 +110,6 @@
       margin-left: 10px; }
     .contacts__link:hover > .contacts__link-text {
       text-decoration: underline; }
+
+.aside__menu, .aside__contacts {
+  margin-bottom: 23px; }

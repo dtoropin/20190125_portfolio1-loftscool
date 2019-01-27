@@ -110,3 +110,51 @@
       margin-left: 10px; }
     .contacts__link:hover > .contacts__link-text {
       text-decoration: underline; }
+
+.aside__menu, .aside__contacts {
+  margin-bottom: 23px; }
+
+.info__block {
+  padding: 0 47px 45px; }
+  .info__block::after {
+    display: block;
+    content: "";
+    clear: both; }
+
+.info__avatar {
+  float: left;
+  width: 142px;
+  height: 142px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #3ba8c0; }
+
+.info__text {
+  float: left;
+  margin-left: 20px; }
+  .info__text-row {
+    margin-bottom: 15px; }
+    .info__text-row::after {
+      display: block;
+      content: "";
+      clear: both; }
+  .info__text-head {
+    float: left;
+    font-family: "firasans-medium", sans-serif;
+    font-size: 17px; }
+  .info__text-discr {
+    width: 200px;
+    float: left;
+    margin-left: 17px; }
+  .info__text-skill {
+    display: inline-block;
+    margin-right: 4px;
+    font-family: "proximanovacond-semibold", sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 19px;
+    background: linear-gradient(0deg, #2e8ca2 0%, #2e8ca2 47%, #3ba8c0 48%, #3ba8c0 100%);
+    border-radius: 3px;
+    padding: 0 14px;
+    overflow: hidden; }
