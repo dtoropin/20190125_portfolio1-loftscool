@@ -152,6 +152,47 @@
 		</div><!-- .wrapper -->
 
 	</div><!-- .content -->
+
+	<!-- modal -->
+	<div class="modal">
+		<section class="addProject">
+			<div class="addProject-title">
+				<h2 class="addProject-title__head">Добавление проекта</h2>
+				<a href="#" class="addProject-title__close"></a>
+			</div><!-- .addProject-title -->
+			
+			<form action="#" class="formAddProject">
+				<div class="formAddProject__item">
+					<p class="formAddProject__label">Сообщение</p>
+					<input type="text" name="text" class="formAddProject__text" placeholder="Введите название"></input>
+				</div><!-- .formWriteme__item -->
+
+				<div class="formAddProject__item">
+					<p class="formAddProject__label">Картинка проекта</p>
+					<div class="file-upload">
+						<label class="file-upload__btn" for="file-upload">
+							<img src="./img/download.png" alt="download">
+						</label>
+						<input type="file" name="file" id="file-upload" class="file-upload__input">
+						<div class="file-upload__text">Загрузите изображение</div>
+					</div><!-- .formAddProject-upload -->
+				</div><!-- .formWriteme__item -->
+
+				<div class="formAddProject__item">
+					<p class="formAddProject__label">URL проекта</p>
+					<input type="url" name="url" class="formAddProject__text" placeholder="Добавьте ссылку"></input>
+				</div><!-- .formWriteme__item -->
+
+				<div class="formAddProject__item">
+					<p class="formAddProject__label">Описание</p>
+					<textarea name="discr" class="formAddProject__textarea" placeholder="Пара слов о Вашем проекте"></textarea>
+				</div><!-- .formWriteme__item -->
+
+				<button type="submit" class="btn btn--proj">Добавить</button>
+			</form>
+		</section><!-- .addProject -->
+	</div><!-- .modal -->
+
 	<footer class="footer">
 		<div class="footer__wrap">
 			<div class="footer__lock">

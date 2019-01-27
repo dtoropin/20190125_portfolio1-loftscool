@@ -458,6 +458,15 @@ ul {
     margin-bottom: 26px;
     overflow: hidden; }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(126, 140, 153, 0.75); }
+
 .btn {
   color: #ffffff;
   font-size: 19px;
@@ -487,6 +496,10 @@ ul {
     .btn--login:active {
       padding: 9px 65px 12px;
       background-color: #3ba8c0; }
+  .btn--proj {
+    padding: 8px 25px 5px; }
+    .btn--proj:active {
+      padding: 9px 25px 4px; }
 
 .btn-sites {
   color: #eff3f7;

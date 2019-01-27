@@ -195,3 +195,97 @@
   .sites-add__text {
     color: #3ba8c0;
     font-size: 13px; }
+
+.formAddProject {
+  padding: 11px 22px 22px; }
+  .formAddProject__item {
+    margin-bottom: 14px; }
+  .formAddProject__label {
+    color: #959aa8;
+    font-size: 17px;
+    margin-bottom: 10px; }
+  .formAddProject__text, .formAddProject__textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #48cbe8;
+    border-radius: 4px;
+    padding: 9px 5px;
+    font-size: 13px;
+    line-height: 13px;
+    outline: none; }
+    .formAddProject__text::placeholder, .formAddProject__textarea::placeholder {
+      color: #48cbe8; }
+    .formAddProject__text.error, .formAddProject__textarea.error {
+      background-color: rgba(249, 126, 118, 0.33);
+      border: 1px solid #f97e76; }
+  .formAddProject__textarea {
+    height: 111px;
+    resize: none; }
+  .formAddProject .btn--proj {
+    display: block;
+    margin: 0 auto; }
+
+.file-upload {
+  position: relative;
+  overflow: hidden; }
+  .file-upload__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 8px 10px 10px;
+    height: 40px;
+    background-color: #48cbe8;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0; }
+    .file-upload__btn:active {
+      box-shadow: inset 0 0 5px #7b7b7b; }
+  .file-upload__text {
+    font-size: 13px;
+    line-height: 13px;
+    padding: 13px 0 12px 5px;
+    color: #48cbe8;
+    background-color: #fbfcfd;
+    border: 1px solid #48cbe8;
+    border-radius: 4px; }
+  .file-upload__input {
+    position: absolute;
+    top: 0;
+    width: 0;
+    outline: none; }
+    .file-upload__input.error ~ div {
+      background-color: rgba(249, 126, 118, 0.33);
+      border: 1px solid #f97e76; }
+
+.addProject {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #eff3f7;
+  border-radius: 4px;
+  box-shadow: 0 6px 12.5px 0.5px rgba(13, 16, 7, 0.35);
+  width: 362px;
+  overflow: hidden; }
+  .addProject-title {
+    position: relative;
+    background-color: #48cbe8; }
+    .addProject-title:after {
+      content: '';
+      display: block;
+      height: 9px;
+      background-color: #67dffa; }
+    .addProject-title__head {
+      color: #ffffff;
+      font-size: 25px;
+      font-family: "firasans-regular", sans-serif;
+      padding: 12px 13px;
+      margin: 0; }
+    .addProject-title__close {
+      position: absolute;
+      top: 12px;
+      right: 13px;
+      display: block;
+      width: 25px;
+      height: 25px;
+      background: url(./img/close.png) no-repeat bottom left; }
