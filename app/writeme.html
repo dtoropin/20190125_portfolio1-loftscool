@@ -20,7 +20,7 @@
 		<header class="header">
 			<div class="header__wrap">
 				<div class="logo">
-					<a href="#">
+					<a href="index.html">
 						<img src="./img/logo.png" alt="logo" class="logo__img">
 					</a>
 				</div><!-- .logo -->
@@ -83,7 +83,43 @@
 			</aside>
 
 			<main class="main">
+				<section class="writeme">
+					<div class="writeme-title">
+						<h2 class="writeme-title__head">У вас интересный проект? Напишите мне</h2>
+					</div><!-- .writeme-title -->
 
+					<form action="#" class="formWriteme">
+						<div class="formWriteme__combo">
+							<div class="formWriteme__item formWriteme__item--half">
+								<p class="formWriteme__label">Имя</p>
+								<input type="text" name="name" class="formWriteme__name" placeholder="Как к Вам обращаться" autofocus>
+							</div><!-- .formWriteme__item -->
+							
+							<div class="formWriteme__item formWriteme__item--half">
+								<p class="formWriteme__label">Email</p>
+								<input type="email" name="email" class="formWriteme__email" placeholder="Куда мне писать">
+							</div><!-- .formWriteme__item -->
+						</div><!-- .formWriteme__combo -->
+						
+						<div class="formWriteme__item">
+							<p class="formWriteme__label">Сообщение</p>
+							<textarea name="text" class="formWriteme__text" placeholder="Кратко в чем суть"></textarea>
+						</div><!-- .formWriteme__item -->
+						
+						<div class="formWriteme__item">
+							<p class="formWriteme__label">Введите код, указанный на картинке</p>
+							<div class="formWriteme__combo">
+								<div class="formWriteme__captcha"></div>
+								<input type="text" name="captcha" class="formWriteme__captchatext" placeholder="Введите код">
+							</div><!-- .formWriteme__combo -->
+						</div><!-- .formWriteme__item -->
+						
+						<div class="formWriteme__item formWriteme__combo">
+							<button type="submit" class="btn">Отправить</button>
+							<button type="reset" class="btn btn--reset">Очистить</button>
+						</div><!-- .formWriteme__item -->
+					</form>
+				</section><!-- .writeme -->
 			</main><!--.main  -->
 		</div><!-- .wrapper -->		
 

@@ -1,0 +1,66 @@
+.formWriteme
+	width: 402px
+	margin: 0 auto
+
+	&__name,
+	&__email,
+	&__text,
+	&__captchatext
+		background-color: $input_bg
+		+inputBorder
+		font-size: 13px
+		color: $base_color
+		&::placeholder
+			color: #48cbe8
+		&:focus
+			outline: none
+		&.error
+			background-color: rgba(249, 126, 118, 0.33)
+			border: 1px solid #f97e76
+
+	&__name,
+	&__email,
+	&__text
+		box-sizing: border-box
+		width: 100%
+		padding: 9px
+
+	&__captcha
+		float: left
+		display: block
+		background-color: #fbfcfd
+		+inputBorder
+		width: 191px
+		height: 79px
+
+	&__captchatext
+		float: right
+		width: 42%
+		padding: 5px 9px
+		margin-top: 25px // костыль
+
+	&__item
+		margin-bottom: 19px
+		&--half
+			float: right
+			width: 47%
+			&:first-child
+				float: left
+
+	&__combo
+		+clearfix
+
+		& > .btn
+			float: left
+			&--reset
+				float: right
+
+	&__label
+		font-size: 19px
+		line-height: 19px
+		color: $menu_color
+		margin-bottom: 5px
+
+	&__text
+		height: 183px
+		resize: none

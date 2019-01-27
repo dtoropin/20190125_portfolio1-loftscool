@@ -113,3 +113,75 @@
 
 .aside__menu, .aside__contacts {
   margin-bottom: 23px; }
+
+.writeme {
+  padding-bottom: 200px;
+  overflow: hidden; }
+  .writeme-title {
+    border-bottom: 17px solid #67dffa;
+    margin-bottom: 47px; }
+    .writeme-title__head {
+      margin: 0;
+      font-size: 27px;
+      line-height: 27px;
+      color: #ffffff;
+      padding: 49px 0 45px;
+      background-color: #48cbe8;
+      text-align: center; }
+
+.formWriteme {
+  width: 402px;
+  margin: 0 auto; }
+  .formWriteme__name, .formWriteme__email, .formWriteme__text, .formWriteme__captchatext {
+    background-color: #fbfcfd;
+    border: 1px solid #48cbe8;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #4a545d; }
+    .formWriteme__name::placeholder, .formWriteme__email::placeholder, .formWriteme__text::placeholder, .formWriteme__captchatext::placeholder {
+      color: #48cbe8; }
+    .formWriteme__name:focus, .formWriteme__email:focus, .formWriteme__text:focus, .formWriteme__captchatext:focus {
+      outline: none; }
+    .formWriteme__name.error, .formWriteme__email.error, .formWriteme__text.error, .formWriteme__captchatext.error {
+      background-color: rgba(249, 126, 118, 0.33);
+      border: 1px solid #f97e76; }
+  .formWriteme__name, .formWriteme__email, .formWriteme__text {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 9px; }
+  .formWriteme__captcha {
+    float: left;
+    display: block;
+    background-color: #fbfcfd;
+    border: 1px solid #48cbe8;
+    border-radius: 4px;
+    width: 191px;
+    height: 79px; }
+  .formWriteme__captchatext {
+    float: right;
+    width: 42%;
+    padding: 5px 9px;
+    margin-top: 25px; }
+  .formWriteme__item {
+    margin-bottom: 19px; }
+    .formWriteme__item--half {
+      float: right;
+      width: 47%; }
+      .formWriteme__item--half:first-child {
+        float: left; }
+  .formWriteme__combo::after {
+    display: block;
+    content: "";
+    clear: both; }
+  .formWriteme__combo > .btn {
+    float: left; }
+    .formWriteme__combo > .btn--reset {
+      float: right; }
+  .formWriteme__label {
+    font-size: 19px;
+    line-height: 19px;
+    color: #959aa8;
+    margin-bottom: 5px; }
+  .formWriteme__text {
+    height: 183px;
+    resize: none; }
