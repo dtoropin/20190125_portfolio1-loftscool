@@ -130,7 +130,7 @@
     margin-left: -22px; }
 
 .sites {
-  padding: 0 0 286px; }
+  padding: 0; }
   .sites::after {
     display: block;
     content: "";
@@ -259,10 +259,7 @@
       border: 1px solid #f97e76; }
 
 .addProject {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: none;
   background-color: #eff3f7;
   border-radius: 4px;
   box-shadow: 0 6px 12.5px 0.5px rgba(13, 16, 7, 0.35);
@@ -317,10 +314,7 @@
     cursor: pointer; }
 
 .alertAdd {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: none;
   width: 362px;
   background-color: #eff3f7;
   border-radius: 4px;

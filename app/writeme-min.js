@@ -1,0 +1,1 @@
+var myModule=function(){var n=function(){};return{init:function(){console.log("It is myModule other!"),n()}}}();myModule.init();

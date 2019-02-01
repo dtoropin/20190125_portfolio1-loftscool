@@ -153,66 +153,62 @@
 	</div><!-- .content -->
 
 	<!-- modal -->
-	<div class="modal">
-		<section class="addProject">
-			<div class="addProject-title">
-				<h2 class="addProject-title__head">Добавление проекта</h2>
-				<a href="#" class="addProject-title__close"></a>
-			</div><!-- .addProject-title -->
+	<section class="addProject">
+		<div class="addProject-title">
+			<h2 class="addProject-title__head">Добавление проекта</h2>
+			<a href="#" class="addProject-title__close b-close"></a>
+		</div><!-- .addProject-title -->
 
-			<div class="alertError">
-				<div class="alertError__text">
-					<span class="alertError__close">
-						<img src="./img//alertError-close.png" alt="close">
-					</span>
-					<h3 class="alertError__head">Ошибка!</h3>
-					<p class="alertError__mes">Невозможно добавить проект.</p>
-				</div><!-- .alertError__text -->
-			</div><!-- .alertError -->
-			
-			<form action="#" class="formAddProject">
-				<div class="formAddProject__item">
-					<p class="formAddProject__label">Название проекта</p>
-					<input type="text" name="text" class="formAddProject__text" placeholder="Введите название"></input>
-				</div><!-- .formWriteme__item -->
-
-				<div class="formAddProject__item">
-					<p class="formAddProject__label">Картинка проекта</p>
-					<div class="file-upload">
-						<label class="file-upload__btn" for="file-upload">
-							<img src="./img/download.png" alt="download">
-						</label>
-						<input type="file" name="file" id="file-upload" class="file-upload__input">
-						<div class="file-upload__text">Загрузите изображение</div>
-					</div><!-- .formAddProject-upload -->
-				</div><!-- .formWriteme__item -->
-
-				<div class="formAddProject__item">
-					<p class="formAddProject__label">URL проекта</p>
-					<input type="url" name="url" class="formAddProject__text" placeholder="Добавьте ссылку"></input>
-				</div><!-- .formWriteme__item -->
-
-				<div class="formAddProject__item">
-					<p class="formAddProject__label">Описание</p>
-					<textarea name="discr" class="formAddProject__textarea" placeholder="Пара слов о Вашем проекте"></textarea>
-				</div><!-- .formWriteme__item -->
-
-				<button type="submit" class="btn btn--proj">Добавить</button>
-			</form>
-		</section><!-- .addProject -->
-	</div><!-- .modal -->
-
-	<div class="alert">
-		<section class="alertAdd">
-			<div class="alertAdd__text">
-				<span class="alertAdd__close">
-					<img src="./img//alertAdd-close.png" alt="close">
+		<div class="alertError">
+			<div class="alertError__text">
+				<span class="alertError__close">
+					<img src="./img//alertError-close.png" alt="close">
 				</span>
-				<h3 class="alertAdd__head">Ура!</h3>
-				<p class="alertAdd__mes">Проект успешно добавлен.</p>
-			</div><!-- .alertAdd__text -->
-		</section><!-- .alertAdd -->
-	</div><!-- .alert -->
+				<h3 class="alertError__head">Ошибка!</h3>
+				<p class="alertError__mes">Невозможно добавить проект.</p>
+			</div><!-- .alertError__text -->
+		</div><!-- .alertError -->
+		
+		<form class="formAddProject">
+			<div class="formAddProject__item">
+				<p class="formAddProject__label">Название проекта</p>
+				<input type="text" name="name" class="formAddProject__text" placeholder="Введите название"></input>
+			</div><!-- .formWriteme__item -->
+
+			<div class="formAddProject__item">
+				<p class="formAddProject__label">Картинка проекта</p>
+				<div class="file-upload">
+					<label class="file-upload__btn" for="file-upload">
+						<img src="./img/download.png" alt="download">
+					</label>
+					<input type="file" name="file" id="file-upload" class="file-upload__input">
+					<div class="file-upload__text">Загрузите изображение</div>
+				</div><!-- .formAddProject-upload -->
+			</div><!-- .formWriteme__item -->
+
+			<div class="formAddProject__item">
+				<p class="formAddProject__label">URL проекта</p>
+				<input type="url" name="projectUrl" class="formAddProject__text" placeholder="Добавьте ссылку"></input>
+			</div><!-- .formWriteme__item -->
+
+			<div class="formAddProject__item">
+				<p class="formAddProject__label">Описание</p>
+				<textarea name="discr" class="formAddProject__textarea" placeholder="Пара слов о Вашем проекте"></textarea>
+			</div><!-- .formWriteme__item -->
+
+			<button type="submit" class="btn btn--proj">Добавить</button>
+		</form>
+	</section><!-- .addProject -->
+
+	<section class="alertAdd">
+		<div class="alertAdd__text">
+			<span class="alertAdd__close b-close">
+				<img src="./img//alertAdd-close.png" alt="close">
+			</span>
+			<h3 class="alertAdd__head">Ура!</h3>
+			<p class="alertAdd__mes">Проект успешно добавлен.</p>
+		</div><!-- .alertAdd__text -->
+	</section><!-- .alertAdd -->
 	<!-- end modal -->
 
 	<footer class="footer">
@@ -227,7 +223,7 @@
 			</div>
 		</div>
 	</footer><!-- .footer -->
-	<script src="./vendor.min.js"></script>
-	<script src="./projects.min.js"></script>
+	<script src="./vendor-min.js"></script>
+	<script src="./projects-min.js"></script>
 </body>
 </html>

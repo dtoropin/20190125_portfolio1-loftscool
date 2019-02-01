@@ -2,7 +2,7 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	browserSync = require('browser-sync'),
 	concat = require('gulp-concat'),
-	uglify = require('gulp-uglify'),
+	minify = require('gulp-minify'),
 	csso = require('gulp-csso'),
 	gcmq = require('gulp-group-css-media-queries'),
 	rename = require('gulp-rename'),
@@ -28,16 +28,15 @@ gulp.task('js-vendor', function () {
 		'app/libs/jquery.bpopup.min.js',
 		'app/libs/qTip/jquery.qtip.min.js'
 	])
-		.pipe(concat('vendor.min.js'))
-		.pipe(uglify())
+		.pipe(concat('vendor.js'))
+		.pipe(minify({noSource: true}))
 		.pipe(gulp.dest('app'));
 });
 
 // Js
 gulp.task('js', function () {
 	return gulp.src('app/js/*.js')
-		.pipe(rename({ suffix: '.min', prefix: '' }))
-		.pipe(uglify())
+		.pipe(minify({noSource: true}))
 		.pipe(gulp.dest('app'))
 		.pipe(browserSync.reload({ stream: true }));
 });
@@ -57,7 +56,6 @@ gulp.task('build', function () {
 		.pipe(gulp.dest('dist'));
 
 	var buildJs = gulp.src('app/*.js')
-		.pipe(uglify())
 		.pipe(gulp.dest('dist'));
 
 	var buildCss = gulp.src('app/*.css')
