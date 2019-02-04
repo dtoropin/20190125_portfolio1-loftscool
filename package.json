@@ -3,7 +3,8 @@
 	"version": "1.0.1",
 	"description": "Boilerplate",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"php": "php -S localhost:8000/app/"
 	},
 	"author": "D.Toropin",
 	"license": "ISC",

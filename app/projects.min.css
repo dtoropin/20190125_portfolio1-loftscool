@@ -250,9 +250,7 @@
     border: 1px solid #48cbe8;
     border-radius: 4px; }
   .file-upload__input {
-    position: absolute;
-    top: 0;
-    width: 0;
+    display: none;
     outline: none; }
     .file-upload__input.error ~ div {
       background-color: rgba(249, 126, 118, 0.33);

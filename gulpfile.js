@@ -10,6 +10,13 @@ var gulp = require('gulp'),
 	imagemin = require('gulp-imagemin'),
 	notify = require('gulp-notify');
 
+var js_vendor = [
+	'node_modules/jquery/dist/jquery.js',
+	'app/libs/jquery.bpopup.min.js',
+	'app/libs/qTip/jquery.qtip.min.js',
+	'app/libs/workingForms.js'
+];
+
 // Browsersync
 gulp.task('browser-sync', function () {
 	browserSync({
@@ -23,11 +30,7 @@ gulp.task('browser-sync', function () {
 
 // Js-vendor
 gulp.task('js-vendor', function () {
-	return gulp.src([
-		'node_modules/jquery/dist/jquery.js',
-		'app/libs/jquery.bpopup.min.js',
-		'app/libs/qTip/jquery.qtip.min.js'
-	])
+	return gulp.src(js_vendor)
 		.pipe(concat('vendor.js'))
 		.pipe(minify({noSource: true}))
 		.pipe(gulp.dest('app'));

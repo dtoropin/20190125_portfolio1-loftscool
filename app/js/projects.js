@@ -1,5 +1,7 @@
-// for modal formAddProject
+// addProlect for projects.html
 var addProject = (function () {
+
+	var _MODAL = null;
 
 	var init = function () {
 		_setUpListners();
@@ -7,82 +9,69 @@ var addProject = (function () {
 	};
 
 	var _setUpListners = function () {
-		// прослушка событий
 		$('.sites-add__link').on('click', _showModal);
 		$('.formAddProject').on('submit', _addProject);
+		$('.formAddProject').find('input, textarea').on('input', _onInput);
+	};
+
+	var _onInput = function (e) {
+		var el = $(this);
+		if (el.hasClass('error')) el.removeClass('error');
 	};
 
 	var _showModal = function (e) {
 		e.preventDefault();
-		$('.addProject').bPopup({ modalClose: false, onClose: _resetForm });
+		_MODAL = $('.addProject').bPopup({
+			modalClose: false,
+			onClose: _resetForm
+		});
 	};
 
 	var _resetForm = function () {
-		$('.formAddProject').trigger('reset');
-		_fileUpload(1);
 		$('.alertError').hide();
+		$('.formAddProject')
+			.trigger('reset')
+			.find('input, textarea').not('input[type="hidden"]').removeClass('error');
+		_fileUpload(1);
 	};
 
 	var _addProject = function (e) {
 		e.preventDefault();
 		var form = $(this),
-			url = 'addProject.php',
-			data = new FormData();
+			url = 'addProject.php';
 
-		//присоединяем наш файл
-		jQuery.each($('input[type=["file"]]')[0].files, function (i, file) {
-			data.append('file', file);
-		});
-		//присоединяем остальные поля
-		data.append('name', $('input[type="text"]').val());
-		data.append('projectUrl', $('input[type="url"]').val());
-		data.append('discr', $('textarea').val());
+		if (!workingForms.validate(form)) return false;
 
-		$.ajax({
-			url: url,
-			type: 'POST',
-			dataType: 'json',
-			cache: false,
-			contentType: false,
-			processData: false,
-			data: data,
-			success: function (response) {
-				if (response.mes === 'OK') {
-					$('.addProject').bPopup({ onClose: _resetForm }).close();
-					$('.alertAdd').bPopup({ modalClose: false, autoClose: 2000 });
-				} else {
-					$('.alertError').show();
-				}
-			}
-		});
+		workingForms.ajaxSend(url)
+			.done(function (ans) {
+				console.log("success");
+				_MODAL.close();
+				$('.alertAdd').bPopup({
+					modalClose: false,
+					autoClose: 2000
+				});
+			})
+			.fail(function () {
+				console.log("error");
+				$('.alertError').show();
+			});
 	};
 
 	var _fileUpload = function (bool) {
-
-		var file_name = null;
-		var file_api = (window.File && window.FileReader && window.FileList && window.Blob) ? true : false;
-		var wrapper = $('.file-upload'),
-			inp = wrapper.find('.file-upload__input'),
-			lbl = wrapper.find('.file-upload__text');
-			lbl.css('color', '#48cbe8')
-			lbl.text('Загрузите изображение');
-
-		if(bool) return false;
-		inp.change(function () {
-			if (file_api && inp[0].files[0])
-				file_name = inp[0].files[0].name;
-			else
-				file_name = inp.val().replace('C:\\fakepath\\', '');
-			if (!file_name.length) return;
+		var lbl = $('.file-upload__text');
+		lbl.css('color', '#48cbe8');
+		lbl.text('Загрузите изображение');
+		if (bool) return false;
+		$('.file-upload__input').change(function () {
 			lbl.css('color', '#000000')
-			lbl.text(file_name);
-			$('.alertError').hide();
+			lbl.text(this.files[0].name);
 		});
 	};
 
 	return {
 		init: init
 	}
+
 })();
 
 addProject.init();

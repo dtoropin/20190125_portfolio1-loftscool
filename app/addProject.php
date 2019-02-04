@@ -1,23 +1,25 @@
 <?php
-$result['mes'] = 'NO';
 $file_name = '';
+$upload = './img/sites/';
+// $upload = './upload/';
 
 // cоздадим папку если её нет
-if(!is_dir('./upload')) mkdir('./upload', 0777);
+if(!is_dir($upload)) mkdir($upload, 0777);
 
-//сохраняем наш файл на сервер в папку /upload/
-if (!empty($_FILES['file']['tmp_name'])) { 
+//сохраняем наш файл на сервер в папку $upload
+if (!empty($_FILES['file']['tmp_name'])) {
 	// $path = $_SERVER['DOCUMENT_ROOT'].'/upload/'.$_FILES['file']['name']; 
-	$path = './upload/'.$_FILES['file']['name'];
-	if (!copy($_FILES['file']['tmp_name'], $path)) die(json_encode($result));
-
-	$file_name = $_FILES['file']['name'];
-	$result['mes'] = 'OK';
-	// Обработка данных
-	// ['filename'] = $file_name;
-	// ['name'] = htmlspecialchars($_POST['name']);
-	// ['url'] = htmlspecialchars($_POST['projectUrl']);
-	// ['comment'] = htmlspecialchars($_POST['discr']);
+	$path = $upload.$_FILES['file']['name'];
+	(copy($_FILES['file']['tmp_name'], $path)) 
+		? $file_name = $_FILES['file']['name']
+		: $file_name = 'no file';
 }
 
-die(json_encode($result));
+// Обработка данных
+// $result['filename'] = $file_name;
+// $result['name'] = htmlspecialchars($_POST['name']);
+// $result['url'] = htmlspecialchars($_POST['projectUrl']);
+// $result['comment'] = htmlspecialchars($_POST['discr']);
+
+// die(json_encode($result));
+die();

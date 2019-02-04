@@ -891,6 +891,8 @@ ul {
   .btn:active {
     padding: 9px 21px 4px;
     background-color: #3ba8c0; }
+  .btn:focus {
+    outline: none; }
   .btn--reset {
     background-color: #849db5;
     box-shadow: 0 3px 1px #687b8f; }
