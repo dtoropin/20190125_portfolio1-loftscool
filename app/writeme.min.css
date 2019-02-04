@@ -185,3 +185,34 @@
   .formWriteme__text {
     height: 183px;
     resize: none; }
+
+.alertAdd {
+  display: none;
+  width: 362px;
+  background-color: #eff3f7;
+  border-radius: 4px;
+  box-shadow: 0 6px 12.5px 0.5px rgba(13, 16, 7, 0.35);
+  padding-top: 21px;
+  padding-bottom: 21px; }
+  .alertAdd__text {
+    position: relative;
+    width: 320px;
+    background-color: rgba(73, 187, 123, 0.33);
+    border: 1px solid #49bb7b;
+    border-radius: 4px;
+    margin: 0 auto;
+    color: #49bb7b; }
+  .alertAdd__head {
+    font-size: 25px;
+    padding: 10px 10px 5px;
+    margin: 0; }
+  .alertAdd__mes {
+    padding: 5px 10px 10px; }
+  .alertAdd__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    display: block;
+    height: 11px;
+    cursor: pointer; }

@@ -43,7 +43,7 @@ var addProject = (function () {
 		if (!workingForms.validate(form)) return false;
 
 		workingForms.ajaxSend(url)
-			.done(function (ans) {
+			.done(function () {
 				console.log("success");
 				_MODAL.close();
 				$('.alertAdd').bPopup({

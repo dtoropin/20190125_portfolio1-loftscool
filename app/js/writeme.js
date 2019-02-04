@@ -1,13 +1,40 @@
-// other
-var myModule = (function () {
+// writeMe for writeme.html
+var writeMe = (function () {
 
 	var init = function () {
-		console.log('It is myModule other!');
 		_setUpListners();
 	};
 
 	var _setUpListners = function () {
-		// прослушка событий
+		$('.formWriteme').on('submit', _sendForm);
+		$('.formWriteme').find('input, textarea').on('input', _onInput);
+	};
+
+	var _onInput = function (e) {
+		var el = $(this);
+		if (el.hasClass('error')) el.removeClass('error');
+	};
+
+	var _sendForm = function (e) {
+		e.preventDefault();
+
+		var form = $(this),
+			url = 'contactme.php';
+
+		if (!workingForms.validate(form)) return false;
+
+		workingForms.ajaxSendNoFile(form, url)
+			.done(function () {
+				console.log("success");
+				$('.formWriteme').trigger('reset');
+				$('.alertAdd').bPopup({
+					modalClose: false,
+					autoClose: 2000
+				});
+			})
+			.fail(function () {
+				console.log("error");
+			});
 	};
 
 
@@ -17,4 +44,4 @@ var myModule = (function () {
 
 })();
 
-myModule.init();
+writeMe.init();
