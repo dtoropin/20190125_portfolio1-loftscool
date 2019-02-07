@@ -15,24 +15,24 @@
   height: 47px; }
 
 .icon--vk {
-  background: url("./img/social_icon_sprites.png") -10px -10px; }
+  background: url("../img/social_icon_sprites.png") -10px -10px; }
   .icon--vk:hover {
-    background: url("./img/social_icon_sprites.png") -10px -76px; }
+    background: url("../img/social_icon_sprites.png") -10px -76px; }
 
 .icon--tw {
-  background: url("./img/social_icon_sprites.png") -10px -410px; }
+  background: url("../img/social_icon_sprites.png") -10px -410px; }
   .icon--tw:hover {
-    background: url("./img/social_icon_sprites.png") -10px -477px; }
+    background: url("../img/social_icon_sprites.png") -10px -477px; }
 
 .icon--facebook {
-  background: url("./img/social_icon_sprites.png") -10px -142px; }
+  background: url("../img/social_icon_sprites.png") -10px -142px; }
   .icon--facebook:hover {
-    background: url("./img/social_icon_sprites.png") -10px -209px; }
+    background: url("../img/social_icon_sprites.png") -10px -209px; }
 
 .icon--github {
-  background: url("./img/social_icon_sprites.png") -10px -276px; }
+  background: url("../img/social_icon_sprites.png") -10px -276px; }
   .icon--github:hover {
-    background: url("./img/social_icon_sprites.png") -10px -343px; }
+    background: url("../img/social_icon_sprites.png") -10px -343px; }
 
 .header {
   background-color: #eff3f7;
@@ -179,11 +179,11 @@
   padding-left: 66px;
   color: #4a545d; }
   .block-text--briefcase {
-    background: url(./img/briefcase.png) no-repeat 0% 2px; }
+    background: url(../img/briefcase.png) no-repeat 0% 2px; }
   .block-text--cap {
-    background: url(./img/cap.png) no-repeat 0% 2px; }
+    background: url(../img/cap.png) no-repeat 0% 2px; }
   .block-text--doc {
-    background: url(./img/doc.png) no-repeat 11px 2px; }
+    background: url(../img/doc.png) no-repeat 11px 2px; }
   .block-text__denotation {
     font-size: 17px; }
   .block-text__description {

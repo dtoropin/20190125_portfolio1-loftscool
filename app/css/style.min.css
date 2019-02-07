@@ -727,55 +727,55 @@ template {
   font-family: "firasans-book";
   font-weight: normal;
   font-style: normal;
-  src: url("./fonts/firasans/firasans-book-webfont.eot");
-  src: url("./fonts/firasans/firasans-book-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/firasans/firasans-book-webfont.woff") format("woff"), url("./fonts/firasans/firasans-book-webfont.woff2") format("woff2"), url("./fonts/firasans/firasans-book-webfont.ttf") format("truetype"); }
+  src: url("../fonts/firasans/firasans-book-webfont.eot");
+  src: url("../fonts/firasans/firasans-book-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/firasans/firasans-book-webfont.woff") format("woff"), url("../fonts/firasans/firasans-book-webfont.woff2") format("woff2"), url("../fonts/firasans/firasans-book-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "firasans-light";
   font-weight: normal;
   font-style: normal;
-  src: url("./fonts/firasans/firasans-light-webfont.eot");
-  src: url("./fonts/firasans/firasans-light-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/firasans/firasans-light-webfont.woff") format("woff"), url("./fonts/firasans/firasans-light-webfont.woff2") format("woff2"), url("./fonts/firasans/firasans-light-webfont.ttf") format("truetype"); }
+  src: url("../fonts/firasans/firasans-light-webfont.eot");
+  src: url("../fonts/firasans/firasans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/firasans/firasans-light-webfont.woff") format("woff"), url("../fonts/firasans/firasans-light-webfont.woff2") format("woff2"), url("../fonts/firasans/firasans-light-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "firasans-lightitalic";
   font-weight: normal;
   font-style: normal;
-  src: url("./fonts/firasans/firasans-lightitalic-webfont.eot");
-  src: url("./fonts/firasans/firasans-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/firasans/firasans-lightitalic-webfont.woff") format("woff"), url("./fonts/firasans/firasans-lightitalic-webfont.woff2") format("woff2"), url("./fonts/firasans/firasans-lightitalic-webfont.ttf") format("truetype"); }
+  src: url("../fonts/firasans/firasans-lightitalic-webfont.eot");
+  src: url("../fonts/firasans/firasans-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/firasans/firasans-lightitalic-webfont.woff") format("woff"), url("../fonts/firasans/firasans-lightitalic-webfont.woff2") format("woff2"), url("../fonts/firasans/firasans-lightitalic-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "firasans-medium";
   font-weight: normal;
   font-style: normal;
-  src: url("./fonts/firasans/firasans-medium-webfont.eot");
-  src: url("./fonts/firasans/firasans-medium-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/firasans/firasans-medium-webfont.woff") format("woff"), url("./fonts/firasans/firasans-medium-webfont.woff2") format("woff2"), url("./fonts/firasans/firasans-medium-webfont.ttf") format("truetype"); }
+  src: url("../fonts/firasans/firasans-medium-webfont.eot");
+  src: url("../fonts/firasans/firasans-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/firasans/firasans-medium-webfont.woff") format("woff"), url("../fonts/firasans/firasans-medium-webfont.woff2") format("woff2"), url("../fonts/firasans/firasans-medium-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "firasans-regular";
   font-weight: normal;
   font-style: normal;
-  src: url("./fonts/firasans/firasans-regular-webfont.eot");
-  src: url("./fonts/firasans/firasans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/firasans/firasans-regular-webfont.woff") format("woff"), url("./fonts/firasans/firasans-regular-webfont.woff2") format("woff2"), url("./fonts/firasans/firasans-regular-webfont.ttf") format("truetype"); }
+  src: url("../fonts/firasans/firasans-regular-webfont.eot");
+  src: url("../fonts/firasans/firasans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/firasans/firasans-regular-webfont.woff") format("woff"), url("../fonts/firasans/firasans-regular-webfont.woff2") format("woff2"), url("../fonts/firasans/firasans-regular-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "proximanovacond-semibold";
   font-weight: normal;
   font-style: normal;
-  src: url("./fonts/proximanovacond/proximanovacond-semibold-webfont.eot");
-  src: url("./fonts/proximanovacond/proximanovacond-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/proximanovacond/proximanovacond-semibold-webfont.woff") format("woff"), url("./fonts/proximanovacond/proximanovacond-semibold-webfont.woff2") format("woff2"), url("./fonts/proximanovacond/proximanovacond-semibold-webfont.ttf") format("truetype"); }
+  src: url("../fonts/proximanovacond/proximanovacond-semibold-webfont.eot");
+  src: url("../fonts/proximanovacond/proximanovacond-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanovacond/proximanovacond-semibold-webfont.woff") format("woff"), url("../fonts/proximanovacond/proximanovacond-semibold-webfont.woff2") format("woff2"), url("../fonts/proximanovacond/proximanovacond-semibold-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "ogilvie_cyr";
   font-weight: normal;
   font-style: normal;
-  src: url("./fonts/ogilvie_cyr/ogilvie_cyr-webfont.eot");
-  src: url("./fonts/ogilvie_cyr/ogilvie_cyr-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/ogilvie_cyr/ogilvie_cyr-webfont.woff") format("woff"), url("./fonts/ogilvie_cyr/ogilvie_cyr-webfont.woff2") format("woff2"), url("./fonts/ogilvie_cyr/ogilvie_cyr-webfont.ttf") format("truetype"); }
+  src: url("../fonts/ogilvie_cyr/ogilvie_cyr-webfont.eot");
+  src: url("../fonts/ogilvie_cyr/ogilvie_cyr-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ogilvie_cyr/ogilvie_cyr-webfont.woff") format("woff"), url("../fonts/ogilvie_cyr/ogilvie_cyr-webfont.woff2") format("woff2"), url("../fonts/ogilvie_cyr/ogilvie_cyr-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'fontello';
-  src: url("./fonts/fontello/fontello.eot?25839792");
-  src: url("./fonts/fontello/fontello.eot?25839792#iefix") format("embedded-opentype"), url("./fonts/fontello/fontello.woff2?25839792") format("woff2"), url("./fonts/fontello/fontello.woff?25839792") format("woff"), url("./fonts/fontello/fontello.ttf?25839792") format("truetype");
+  src: url("../fonts/fontello/fontello.eot?25839792");
+  src: url("../fonts/fontello/fontello.eot?25839792#iefix") format("embedded-opentype"), url("../fonts/fontello/fontello.woff2?25839792") format("woff2"), url("../fonts/fontello/fontello.woff?25839792") format("woff"), url("../fonts/fontello/fontello.ttf?25839792") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -828,7 +828,7 @@ body {
   font-family: "firasans-book", sans-serif;
   font-size: 15px;
   color: #4a545d;
-  background-image: url(./img/background.png); }
+  background-image: url(../img/background.png); }
 
 a {
   outline: none;
@@ -945,12 +945,12 @@ ul {
     float: left;
     margin-left: 30px; }
     .footer__lock.active > .footer__lock-link, .footer__lock-link:hover {
-      background: url(./img/footer-unlock.png) no-repeat center; }
+      background: url(../img/footer-unlock.png) no-repeat center; }
     .footer__lock-link {
       display: block;
       width: 20px;
       height: 32px;
-      background: url(./img/footer-lock.png) no-repeat center; }
+      background: url(../img/footer-lock.png) no-repeat center; }
   .footer__copy {
     float: left;
     margin-left: 235px;

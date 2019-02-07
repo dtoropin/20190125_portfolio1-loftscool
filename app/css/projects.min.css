@@ -15,24 +15,24 @@
   height: 47px; }
 
 .icon--vk {
-  background: url("./img/social_icon_sprites.png") -10px -10px; }
+  background: url("../img/social_icon_sprites.png") -10px -10px; }
   .icon--vk:hover {
-    background: url("./img/social_icon_sprites.png") -10px -76px; }
+    background: url("../img/social_icon_sprites.png") -10px -76px; }
 
 .icon--tw {
-  background: url("./img/social_icon_sprites.png") -10px -410px; }
+  background: url("../img/social_icon_sprites.png") -10px -410px; }
   .icon--tw:hover {
-    background: url("./img/social_icon_sprites.png") -10px -477px; }
+    background: url("../img/social_icon_sprites.png") -10px -477px; }
 
 .icon--facebook {
-  background: url("./img/social_icon_sprites.png") -10px -142px; }
+  background: url("../img/social_icon_sprites.png") -10px -142px; }
   .icon--facebook:hover {
-    background: url("./img/social_icon_sprites.png") -10px -209px; }
+    background: url("../img/social_icon_sprites.png") -10px -209px; }
 
 .icon--github {
-  background: url("./img/social_icon_sprites.png") -10px -276px; }
+  background: url("../img/social_icon_sprites.png") -10px -276px; }
   .icon--github:hover {
-    background: url("./img/social_icon_sprites.png") -10px -343px; }
+    background: url("../img/social_icon_sprites.png") -10px -343px; }
 
 .header {
   background-color: #eff3f7;
@@ -294,7 +294,7 @@
       display: block;
       width: 25px;
       height: 25px;
-      background: url(./img/close.png) no-repeat bottom left; }
+      background: url(../img/close.png) no-repeat bottom left; }
 
 .alertError {
   padding: 15px 21px 0;
