@@ -58,7 +58,7 @@ gulp.task('build', function () {
 	var buildHtml = gulp.src('app/*.html')
 		.pipe(gulp.dest('dist'));
 
-	var buildJs = gulp.src('app/js/*.js')
+	var buildJs = gulp.src('app/js/[a-z]*-min.js')
 		.pipe(gulp.dest('dist/js'));
 
 	var buildLibs = gulp.src('app/libs/modernizr.js')
