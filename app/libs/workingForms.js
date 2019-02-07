@@ -1,13 +1,66 @@
 // other
 var workingForms = (function () {
 
+	var _createQtip = function (element, position) {
+		// target для custom input 'file'
+		var target = element.attr('type') === 'file' ? element.siblings('div') : element;
+		// позиция тултипа
+		if (position === 'right') {
+			position = {
+				my: 'center left',
+				at: 'center right',
+				target: target
+			}
+		} else {
+			position = {
+				my: 'center right',
+				at: 'center left',
+				target: target
+			}
+		}
+
+		// инициализация тултипа
+		element.qtip({
+			content: {
+				text: function () {
+					return $(this).attr('qtip-content');
+				}
+			},
+			show: {
+				event: 'show'
+			},
+			hide: {
+				event: 'change keydown hideTooltip'
+			},
+			position: position,
+			style: {
+				classes: 'qtip-mystyle',
+				tip: {
+					border: 0,
+					heigth: 10,
+					width: 16
+				}
+			}
+		}).trigger('show');
+
+	};
+
+	var resetErrorForm = function (form) {
+		$('.qtip').hide();
+		form.find('input, textarea').not('input[type="hidden"]').removeClass('error');
+	};
+
 	var validate = function (form) {
 		var elems = form.find('input, textarea').not('input[type="hidden"]'),
 			valid = true;
 
 		$.each(elems, function (i, val) {
-			if(val.value.length === 0) {
+			var pos = val.hasAttribute('qtip-position')
+				? val.getAttribute('qtip-position')
+				: 'left';
+			if (val.value.length === 0) {
 				val.classList.add('error');
+				_createQtip($(val), pos);
 				valid = false;
 			}
 		});
@@ -49,7 +102,8 @@ var workingForms = (function () {
 	return {
 		validate: validate,
 		ajaxSend: ajaxSend,
-		ajaxSendNoFile: ajaxSendNoFile
+		ajaxSendNoFile: ajaxSendNoFile,
+		resetErrorForm: resetErrorForm
 	}
 
 })();

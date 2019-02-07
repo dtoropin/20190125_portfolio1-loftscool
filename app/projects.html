@@ -156,7 +156,7 @@
 	<section class="addProject">
 		<div class="addProject-title">
 			<h2 class="addProject-title__head">Добавление проекта</h2>
-			<a href="#" class="addProject-title__close b-close"></a>
+			<a href="#" class="addProject-title__close"></a>
 		</div><!-- .addProject-title -->
 
 		<div class="alertError">
@@ -172,7 +172,11 @@
 		<form class="formAddProject">
 			<div class="formAddProject__item">
 				<p class="formAddProject__label">Название проекта</p>
-				<input type="text" name="name" class="formAddProject__text" placeholder="Введите название"></input>
+				<input type="text" name="name" 
+					class="formAddProject__text" 
+					placeholder="Введите название"
+					qtip-content="введите название"
+				>
 			</div><!-- .formWriteme__item -->
 
 			<div class="formAddProject__item">
@@ -181,19 +185,30 @@
 					<label class="file-upload__btn" for="file-upload">
 						<img src="./img/download.png" alt="download">
 					</label>
-					<input type="file" name="file" id="file-upload" class="file-upload__input">
+					<input type="file" name="file" id="file-upload" 
+						class="file-upload__input"
+						qtip-content="изображение"
+					>
 					<div class="file-upload__text">Загрузите изображение</div>
 				</div><!-- .formAddProject-upload -->
 			</div><!-- .formWriteme__item -->
 
 			<div class="formAddProject__item">
 				<p class="formAddProject__label">URL проекта</p>
-				<input type="text" name="projectUrl" class="formAddProject__text" placeholder="Добавьте ссылку"></input>
+				<input type="text" name="projectUrl" 
+					class="formAddProject__text" 
+					placeholder="Добавьте ссылку"
+					qtip-content="ссылка на проект"
+				>
 			</div><!-- .formWriteme__item -->
 
 			<div class="formAddProject__item">
 				<p class="formAddProject__label">Описание</p>
-				<textarea name="discr" class="formAddProject__textarea" placeholder="Пара слов о Вашем проекте"></textarea>
+				<textarea name="discr" 
+					class="formAddProject__textarea" 
+					placeholder="Пара слов о Вашем проекте"
+					qtip-content="описание проекта"
+				></textarea>
 			</div><!-- .formWriteme__item -->
 
 			<button type="submit" class="btn btn--proj">Добавить</button>

@@ -92,25 +92,43 @@
 						<div class="formWriteme__combo">
 							<div class="formWriteme__item formWriteme__item--half">
 								<p class="formWriteme__label">Имя</p>
-								<input type="text" name="name" class="formWriteme__name" placeholder="Как к Вам обращаться" autofocus>
+								<input type="text" name="name" 
+									class="formWriteme__name" 
+									placeholder="Как к Вам обращаться" 
+									qtip-content="Вы не ввели имя"
+								autofocus>
 							</div><!-- .formWriteme__item -->
 							
 							<div class="formWriteme__item formWriteme__item--half">
 								<p class="formWriteme__label">Email</p>
-								<input type="email" name="email" class="formWriteme__email" placeholder="Куда мне писать">
+								<input type="email" name="email" 
+									class="formWriteme__email" 
+									placeholder="Куда мне писать"
+									qtip-content="Вы не ввели email"
+									qtip-position="right"
+								>
 							</div><!-- .formWriteme__item -->
 						</div><!-- .formWriteme__combo -->
 						
 						<div class="formWriteme__item">
 							<p class="formWriteme__label">Сообщение</p>
-							<textarea name="text" class="formWriteme__text" placeholder="Кратко в чем суть"></textarea>
+							<textarea name="text" 
+								class="formWriteme__text" 	
+								placeholder="Кратко в чем суть"
+								qtip-content="Ваш вопрос"
+							></textarea>
 						</div><!-- .formWriteme__item -->
 						
 						<div class="formWriteme__item">
 							<p class="formWriteme__label">Введите код, указанный на картинке</p>
 							<div class="formWriteme__combo">
 								<div class="formWriteme__captcha"></div>
-								<input type="text" name="captcha" class="formWriteme__captchatext" placeholder="Введите код">
+								<input type="text" name="captcha" 
+									class="formWriteme__captchatext" 
+									placeholder="Введите код"
+									qtip-content="Вы не ввели код"
+									qtip-position="right"
+								>
 							</div><!-- .formWriteme__combo -->
 						</div><!-- .formWriteme__item -->
 						

@@ -197,6 +197,16 @@
   color: #3ba8c0;
   font-size: 13px; }
 
+.qtip-mystyle {
+  color: #ffffff;
+  background-color: #f97e76;
+  border: none;
+  border-radius: 3px; }
+
+.qtip-content {
+  padding: 5px 20px;
+  line-height: 15px; }
+
 .formAddProject {
   padding: 11px 22px 22px; }
   .formAddProject__item {
@@ -308,8 +318,7 @@
     right: 0;
     padding: 10px;
     display: block;
-    height: 11px;
-    cursor: pointer; }
+    height: 11px; }
 
 .alertAdd {
   display: none;

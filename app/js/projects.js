@@ -12,6 +12,7 @@ var addProject = (function () {
 		$('.sites-add__link').on('click', _showModal);
 		$('.formAddProject').on('submit', _addProject);
 		$('.formAddProject').find('input, textarea').on('input', _onInput);
+		$('.addProject-title__close').on('click', _resetForm);
 	};
 
 	var _onInput = function (e) {
@@ -22,17 +23,17 @@ var addProject = (function () {
 	var _showModal = function (e) {
 		e.preventDefault();
 		_MODAL = $('.addProject').bPopup({
-			modalClose: false,
-			onClose: _resetForm
+			modalClose: false
 		});
 	};
 
-	var _resetForm = function () {
+	var _resetForm = function (e) {
+		e.preventDefault();
+		workingForms.resetErrorForm($('.formAddProject'));
 		$('.alertError').hide();
-		$('.formAddProject')
-			.trigger('reset')
-			.find('input, textarea').not('input[type="hidden"]').removeClass('error');
+		$(('.formAddProject')).trigger('reset');
 		_fileUpload(1);
+		_MODAL.close();
 	};
 
 	var _addProject = function (e) {

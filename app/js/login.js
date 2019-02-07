@@ -1,18 +1,13 @@
-// writeMe for writeme.html
-var writeMe = (function () {
+// login.js for login.html
+var login = (function () {
 
 	var init = function () {
 		_setUpListners();
 	};
 
 	var _setUpListners = function () {
-		$('.formWriteme').on('submit', _sendForm);
-		$('.formWriteme').find('input, textarea').on('input', _onInput);
-		$('.formWriteme').on('reset', _resetForm);
-	};
-
-	var _resetForm = function() {
-		workingForms.resetErrorForm($(this));
+		$('.formLogin').on('submit', _loginSend);
+		$('.formLogin').find('input').on('input', _onInput);
 	};
 
 	var _onInput = function (e) {
@@ -20,22 +15,18 @@ var writeMe = (function () {
 		if (el.hasClass('error')) el.removeClass('error');
 	};
 
-	var _sendForm = function (e) {
+	var _loginSend = function (e) {
 		e.preventDefault();
 
 		var form = $(this),
-			url = 'contactme.php';
+			url = 'auth.php';
 
 		if (!workingForms.validate(form)) return false;
 
 		workingForms.ajaxSendNoFile(form, url)
 			.done(function () {
 				console.log("success");
-				$('.formWriteme').trigger('reset');
-				$('.alertAdd').bPopup({
-					modalClose: false,
-					autoClose: 2000
-				});
+				window.location.href = './projects.html';
 			})
 			.fail(function () {
 				console.log("error");
@@ -49,4 +40,4 @@ var writeMe = (function () {
 
 })();
 
-writeMe.init();
+login.init();

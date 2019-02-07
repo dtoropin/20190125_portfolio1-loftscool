@@ -1,3 +1,13 @@
+.qtip-mystyle {
+  color: #ffffff;
+  background-color: #f97e76;
+  border: none;
+  border-radius: 3px; }
+
+.qtip-content {
+  padding: 5px 20px;
+  line-height: 15px; }
+
 .login {
   padding: 30px 0; }
   .login-block {
