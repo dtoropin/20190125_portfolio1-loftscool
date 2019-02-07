@@ -1,0 +1,15 @@
+{
+	"name": "2014/20190125_portfolio1-loftscool",
+	"authors": [
+		{
+			"name": "Denis Toropin",
+			"email": "denis.toropin@yandex.ru"
+		}
+	],
+	"config": {
+		"vendor-dir": "vendor"
+	},
+	"require": {
+		"klein/klein": "dev-master"
+	}
+}
