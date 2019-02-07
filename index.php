@@ -3,21 +3,24 @@
 require_once 'vendor/autoload.php';
 
 $router = new \Klein\Klein();
+$templater = Templater::getInstance();
 
-$router->respond('GET', '/?', function () {
-	return 'Главная страница!';
-});
-
-$router->respond('GET', '/projects/?', function () {
+$router->respond('GET', '/portfolio/?', function () use ($templater) {
 	return 'Страница портфолио!';
 });
 
-$router->respond('GET', '/writeme/?', function () {
+$router->respond('GET', '/contacts/?', function () use ($templater) {
 	return 'Страница контактов!';
 });
 
-$router->respond('GET', '/login/?', function () {
+$router->respond('GET', '/auth/?', function () use ($templater) {
 	return 'Страница авторизации!';
+});
+
+$router->respond('GET', '/?', function () use ($templater) {
+
+	return $templater->display('main_template');
+
 });
 
 $router->dispatch();
