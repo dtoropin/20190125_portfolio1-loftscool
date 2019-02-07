@@ -1,0 +1,39 @@
+<aside class="aside">
+	<nav class="aside__menu">
+		<ul class="menu">
+			<li class="menu__item {% if active == 'index' %} active {% endif %} ">
+				<a href="/" class="menu__link">Обо мне</a>
+			</li>
+			<li class="menu__item {% if active == 'portfolio' %} active {% endif %} ">
+				<a href="/portfolio" class="menu__link">Мои работы</a>
+			</li>
+			<li class="menu__item {% if active == 'contacts' %}	active {% endif %} ">
+				<a href="/contacts" class="menu__link">Связаться со мной</a>
+			</li>
+		</ul>
+	</nav><!-- .aside__menu -->
+
+	<div class="aside__contacts">
+		<ul class="contacts">
+			<li class="contacts__item item-1">Контакты</li>
+			<li class="contacts__item item-2">
+				<a href="mailto:pochta@mail.ru" class="contacts__link">
+					<i class="icon-mail"></i>
+					<span class="contacts__link-text">pochta@mail.ru</span>
+				</a>
+			</li>
+			<li class="contacts__item item-3">
+				<a href="tel:+79812342323" class="contacts__link">
+					<i class="icon-phone"></i>
+					<span class="contacts__link-text">+79812342323</span>
+				</a>
+			</li>
+			<li class="contacts__item item-4">
+				<a href="skype:username?call" class="contacts__link">
+					<i class="icon-skype"></i>
+					<span class="contacts__link-text">nickname</span>
+				</a>
+			</li>
+		</ul>
+	</div><!-- .aside__contacts -->
+</aside>

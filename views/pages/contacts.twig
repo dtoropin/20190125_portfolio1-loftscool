@@ -1,0 +1,68 @@
+{% extends 'main_template.twig' %}
+
+{% block top_css %}
+	<link rel="stylesheet" href="{{ config.base_url }}dist/css/writeme.min.css">
+{% endblock %}
+
+{% block content %}
+	<section class="writeme">
+		<div class="writeme-title">
+			<h2 class="writeme-title__head">У вас интересный проект? Напишите мне</h2>
+		</div><!-- .writeme-title -->
+
+		<form action="#" class="formWriteme">
+			<div class="formWriteme__combo">
+				<div class="formWriteme__item formWriteme__item--half">
+					<p class="formWriteme__label">Имя</p>
+					<input type="text" name="name"
+								 class="formWriteme__name"
+								 placeholder="Как к Вам обращаться"
+								 qtip-content="Вы не ввели имя"
+								 autofocus>
+				</div><!-- .formWriteme__item -->
+
+				<div class="formWriteme__item formWriteme__item--half">
+					<p class="formWriteme__label">Email</p>
+					<input type="email" name="email"
+								 class="formWriteme__email"
+								 placeholder="Куда мне писать"
+								 qtip-content="Вы не ввели email"
+								 qtip-position="right"
+					>
+				</div><!-- .formWriteme__item -->
+			</div><!-- .formWriteme__combo -->
+
+			<div class="formWriteme__item">
+				<p class="formWriteme__label">Сообщение</p>
+				<textarea name="text"
+									class="formWriteme__text"
+									placeholder="Кратко в чем суть"
+									qtip-content="Ваш вопрос"
+				></textarea>
+			</div><!-- .formWriteme__item -->
+
+			<div class="formWriteme__item">
+				<p class="formWriteme__label">Введите код, указанный на картинке</p>
+				<div class="formWriteme__combo">
+					<div class="formWriteme__captcha"></div>
+					<input type="text" name="captcha"
+								 class="formWriteme__captchatext"
+								 placeholder="Введите код"
+								 qtip-content="Вы не ввели код"
+								 qtip-position="right"
+					>
+				</div><!-- .formWriteme__combo -->
+			</div><!-- .formWriteme__item -->
+
+			<div class="formWriteme__item formWriteme__combo">
+				<button type="submit" class="btn">Отправить</button>
+				<button type="reset" class="btn btn--reset">Очистить</button>
+			</div><!-- .formWriteme__item -->
+		</form>
+	</section><!-- .writeme -->
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ config.base_ul }}dist/js/vendor-min.js"></script>
+<script src="{{ config.base_ul }}dist/js/writeme-min.js"></script>
+{% endblock %}

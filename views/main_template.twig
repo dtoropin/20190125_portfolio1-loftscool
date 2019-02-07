@@ -1,1 +1,26 @@
-Базовый шаблон
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+{% include '_parts/head.twig' %}
+{% block top_css %} {% endblock %}
+</head>
+<body>
+<div class="content">
+	{% if logger is not defined %}
+		{% include '_parts/header.twig' %}
+		<div class="wrapper">
+			{% include '_parts/aside_left.twig' %}
+
+			<main class="main">
+				{% block content %} {% endblock %}
+			</main><!--.main  -->
+		</div><!-- .wrapper -->
+	{% else %}
+		{% block authform %} {% endblock %}
+	{% endif %}
+</div><!-- .content -->
+{% block modal %} {% endblock %}
+{% include '_parts/footer.twig' %}
+{% block scripts %} {% endblock %}
+</body>
+</html>
