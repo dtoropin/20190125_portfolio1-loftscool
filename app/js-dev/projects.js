@@ -46,6 +46,8 @@ var addProject = (function () {
 		workingForms.ajaxSend(url)
 			.done(function () {
 				console.log("success");
+				$(('.formAddProject')).trigger('reset');
+				_fileUpload(1);
 				_MODAL.close();
 				$('.alertAdd').bPopup({
 					modalClose: false,
