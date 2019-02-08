@@ -38,7 +38,7 @@ gulp.task('js-vendor', function () {
 
 // Js
 gulp.task('js', function () {
-	return gulp.src('app/js/*.js')
+	return gulp.src('app/js-dev/*.js')
 		.pipe(minify({noSource: true}))
 		.pipe(gulp.dest('app/js'))
 		.pipe(browserSync.reload({ stream: true }));
@@ -58,7 +58,11 @@ gulp.task('build', function () {
 	var buildHtml = gulp.src('app/*.html')
 		.pipe(gulp.dest('dist'));
 
-	var buildJs = gulp.src('app/js/[a-z]*-min.js')
+	var buildPHP = gulp.src('app/*.php')
+		.pipe(gulp.dest('dist'));
+
+	// var buildJs = gulp.src('app/js/[a-z]*-min.js')
+	var buildJs = gulp.src('app/js/*.js')
 		.pipe(gulp.dest('dist/js'));
 
 	var buildLibs = gulp.src('app/libs/modernizr.js')
@@ -90,7 +94,7 @@ gulp.task('watch', ['sass', 'js-vendor', 'js', 'browser-sync'], function () {
 			gulp.run('sass');
 		}, 1000);
 	});
-	gulp.watch('app/js/**/*.js', ['js']);
+	gulp.watch('app/js-dev/**/*.js', ['js']);
 	gulp.watch('app/*.html', browserSync.reload);
 });
 
