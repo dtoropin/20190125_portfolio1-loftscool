@@ -62,6 +62,20 @@
 	</section><!-- .writeme -->
 {% endblock %}
 
+{% block modal %}
+	<!-- modal -->
+	<section class="alertAdd">
+		<div class="alertAdd__text">
+			<span class="alertAdd__close b-close">
+				<img src="{{ config.base_url }}dist/img//alertAdd-close.png" alt="close">
+			</span>
+			<h3 class="alertAdd__head">Спасибо!</h3>
+			<p class="alertAdd__mes">Ваше сообщение отправлено!</p>
+		</div><!-- .alertAdd__text -->
+	</section><!-- .alertAdd -->
+	<!-- end modal -->
+{% endblock %}
+
 {% block scripts %}
 <script src="{{ config.base_ul }}dist/js/vendor-min.js"></script>
 <script src="{{ config.base_ul }}dist/js/writeme-min.js"></script>
