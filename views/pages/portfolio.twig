@@ -1,0 +1,153 @@
+{% extends 'main_template.twig' %}
+
+{% block top_css %}
+	<link rel="stylesheet" href="{{ config.base_url }}dist/css/projects.min.css">
+{% endblock %}
+
+{% block content %}
+	<section class="projects">
+		<h2 class="block-title">Мои работы</h2>
+		<div class="sites">
+			<div class="sites-item">
+				<div class="sites-item__img">
+					<img src="{{ config.base_url }}dist/img/sites/site-1.jpg" alt="site-1">
+					<div class="sites-item__overlay">
+						<a href="#" class="btn-sites" target="_blank">название</a>
+					</div>
+				</div>
+				<p class="sites-item__title">www.site.ru</p>
+				<p class="sites-item__deskription">
+					Информация о проекте<br> 1 превью 2 строки....
+				</p>
+			</div><!-- .sites-item -->
+
+			<div class="sites-item">
+				<div class="sites-item__img">
+					<img src="{{ config.base_url }}dist/img/sites/site-2.jpg" alt="site-2">
+					<div class="sites-item__overlay">
+						<a href="#" class="btn-sites" target="_blank">название</a>
+					</div>
+				</div>
+				<p class="sites-item__title">www.site.ru</p>
+				<p class="sites-item__deskription">
+					Информация о проекте<br> 2 превью 2 строки....
+				</p>
+			</div><!-- .sites-item -->
+
+			<div class="sites-item">
+				<div class="sites-item__img">
+					<img src="{{ config.base_url }}dist/img/sites/site-3.jpg" alt="site-3">
+					<div class="sites-item__overlay">
+						<a href="#" class="btn-sites" target="_blank">название</a>
+					</div>
+				</div>
+				<p class="sites-item__title">www.site.ru</p>
+				<p class="sites-item__deskription">
+					Информация о проекте<br> 3 превью 2 строки....
+				</p>
+			</div><!-- .sites-item -->
+
+			<div class="sites-item">
+				<div class="sites-item__img">
+					<img src="{{ config.base_url }}dist/img/sites/site-4.jpg" alt="site-4">
+					<div class="sites-item__overlay">
+						<a href="#" class="btn-sites" target="_blank">название</a>
+					</div>
+				</div>
+				<p class="sites-item__title">www.site.ru</p>
+				<p class="sites-item__deskription">
+					Информация о проекте<br> 4 превью 2 строки....
+				</p>
+			</div><!-- .sites-item -->
+
+			<div class="sites-add">
+				<div class="sites-add__block">
+					<a href="#" class="sites-add__link">
+						<img src="{{ config.base_url }}dist/img/add-site.png" alt="add" class="sites-add__img">
+						<span class="sites-add__text">Добавить проект</span>
+					</a>
+				</div>
+			</div><!-- .sites-add -->
+		</div><!-- .sites -->
+	</section><!-- .projects -->
+{% endblock %}
+
+{% block modal %}
+	<!-- modal -->
+	<section class="addProject">
+		<div class="addProject-title">
+			<h2 class="addProject-title__head">Добавление проекта</h2>
+			<a href="#" class="addProject-title__close"></a>
+		</div><!-- .addProject-title -->
+
+		<div class="alertError">
+			<div class="alertError__text">
+				<span class="alertError__close">
+					<img src="{{ config.base_url }}dist/img/alertError-close.png" alt="close">
+				</span>
+				<h3 class="alertError__head">Ошибка!</h3>
+				<p class="alertError__mes">Невозможно добавить проект.</p>
+			</div><!-- .alertError__text -->
+		</div><!-- .alertError -->
+
+		<form class="formAddProject">
+			<div class="formAddProject__item">
+				<p class="formAddProject__label">Название проекта</p>
+				<input type="text" name="name"
+							 class="formAddProject__text"
+							 placeholder="Введите название"
+							 qtip-content="введите название"
+				>
+			</div><!-- .formWriteme__item -->
+
+			<div class="formAddProject__item">
+				<p class="formAddProject__label">Картинка проекта</p>
+				<div class="file-upload">
+					<label class="file-upload__btn" for="file-upload">
+						<img src="{{ config.base_url }}dist/img/download.png" alt="download">
+					</label>
+					<input type="file" name="file" id="file-upload"
+								 class="file-upload__input"
+								 qtip-content="изображение"
+					>
+					<div class="file-upload__text">Загрузите изображение</div>
+				</div><!-- .formAddProject-upload -->
+			</div><!-- .formWriteme__item -->
+
+			<div class="formAddProject__item">
+				<p class="formAddProject__label">URL проекта</p>
+				<input type="text" name="projectUrl"
+							 class="formAddProject__text"
+							 placeholder="Добавьте ссылку"
+							 qtip-content="ссылка на проект"
+				>
+			</div><!-- .formWriteme__item -->
+
+			<div class="formAddProject__item">
+				<p class="formAddProject__label">Описание</p>
+				<textarea name="discr"
+									class="formAddProject__textarea"
+									placeholder="Пара слов о Вашем проекте"
+									qtip-content="описание проекта"
+				></textarea>
+			</div><!-- .formWriteme__item -->
+
+			<button type="submit" class="btn btn--proj">Добавить</button>
+		</form>
+	</section><!-- .addProject -->
+	<section class="alertAdd">
+		<div class="alertAdd__text">
+			<span class="alertAdd__close b-close">
+				<img src="{{ config.base_url }}dist/img//alertAdd-close.png" alt="close">
+			</span>
+			<h3 class="alertAdd__head">Ура!</h3>
+			<p class="alertAdd__mes">Проект успешно добавлен.</p>
+		</div><!-- .alertAdd__text -->
+	</section><!-- .alertAdd -->
+	<!-- end modal -->
+{% endblock %}
+
+{% block scripts %}
+	<script src="{{ config.base_url }}dist/js/vendor-min.js"></script>
+	<script src="{{ config.base_url }}dist/js/projects-min.js"></script>
+{% endblock %}

@@ -1,0 +1,22 @@
+{
+	"name": "2014/20190125_portfolio1-loftscool",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Denis Toropin",
+			"email": "denis.toropin@yandex.ru"
+		}
+	],
+	"config": {
+		"vendor-dir": "vendor"
+	},
+	"autoload": {
+		"classmap": [
+			"dist/classes"
+		]
+	},
+	"require": {
+		"klein/klein": "2.1.*",
+		"twig/twig": "2.6.*"
+	}
+}

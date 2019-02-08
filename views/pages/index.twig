@@ -1,0 +1,78 @@
+{% extends 'main_template.twig' %}
+
+{% block top_css %}
+	<link rel="stylesheet" href="{{ config.base_url }}dist/css/index.min.css">
+{% endblock %}
+
+{% block content %}
+	<section class="info">
+		<h2 class="block-title">Основная информация</h2>
+		<div class="info__block">
+			<div class="info__avatar">
+				<img src="{{ config.base_ul }}dist/img/user.jpg" alt="foto user" class="info__img">
+			</div>
+
+			<div class="info__text">
+				<div class="info__text-row">
+					<div class="info__text-head">Меня&nbsp;зовут:</div>
+					<div class="info__text-discr">Герра Симпсон</div>
+				</div><!-- .info__text-row -->
+
+				<div class="info__text-row">
+					<div class="info__text-head">Мой&nbsp;возраст:</div>
+					<div class="info__text-discr">25 лет</div>
+				</div><!-- .info__text-row -->
+
+				<div class="info__text-row">
+					<div class="info__text-head">Мой&nbsp;город:</div>
+					<div class="info__text-discr">Санкт-Петербург, Россия</div>
+				</div><!-- .info__text-row -->
+
+				<div class="info__text-row">
+					<div class="info__text-head">Моя&nbsp;специализация:</div>
+					<div class="info__text-discr">FRONTEND разработчик</div>
+				</div><!-- .info__text-row -->
+
+				<div class="info__text-row">
+					<div class="info__text-head">Ключевые&nbsp;навыки:</div>
+					<div class="info__text-discr">
+						<div class="info__text-skill">html</div>
+						<div class="info__text-skill">css</div>
+						<div class="info__text-skill">javascript</div>
+						<div class="info__text-skill">gulp</div>
+						<div class="info__text-skill">git</div>
+						<div class="info__text-skill">sass</div>
+					</div>
+				</div><!-- .info__text-row -->
+			</div><!-- .info__text -->
+		</div><!-- .info__block -->
+	</section><!-- .info -->
+	<section class="experience">
+		<h2 class="block-title">Опыт работы</h2>
+		<div class="experience__block">
+			<div class="block-text block-text--briefcase">
+				<p class="block-text__denotation">"ИП Боровицкий" - продавец дисков</p>
+				<span class="block-text__description">Сентябрь 2005 - Август 2008</span>
+			</div>
+
+			<div class="block-text  block-text--briefcase">
+				<p class="block-text__denotation">"ООО Системы безопасности" - Системный администратор</p>
+				<span class="block-text__description">Июнь 2008 - Июль 2010</span>
+			</div>
+		</div><!-- .experience__block -->
+	</section><!-- .experience -->
+	<section class="education">
+	<h2 class="block-title">Образование</h2>
+	<div class="education__block">
+		<div class="block-text block-text--cap">
+			<div class="block-text__denotation">Незаконченное высшее. СПБГУ ИТМО</div>
+			<div class="block-text__description">Октябрь 2012 - по настоящее время</div>
+		</div>
+
+		<div class="block-text block-text--doc">
+			<div class="block-text__denotation">Курсы Loftscool.ru</div>
+			<div class="block-text__description">Ноябрь 2014 - по настоящее время</div>
+		</div>
+	</div><!-- .education-wrap -->
+</section><!-- .education -->
+{% endblock %}
