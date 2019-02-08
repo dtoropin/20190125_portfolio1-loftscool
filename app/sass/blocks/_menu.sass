@@ -1,0 +1,28 @@
+.menu
+	border-radius: 4px
+	overflow: hidden
+	background: $bg_blocks
+	font-size: 21px
+
+	&__item
+		color: $menu_color
+		&::before
+			content: ''
+			display: block
+			height: 2px
+			width: 90%
+			margin: 0 auto
+			background-color: $accent_color
+		&:first-child:before
+			display: none
+		&:hover:not(.active)
+			color:  $accent_color
+		
+		&.active
+			background: $accent_color
+			margin-bottom: -2px
+			color: #ffffff
+
+	&__link
+		display: block
+		padding: 27px 0 27px 28px

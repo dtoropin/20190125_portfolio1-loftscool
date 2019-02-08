@@ -1,0 +1,24 @@
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal)
+	@font-face
+		font-family: $font-family
+		font-weight: $weight
+		font-style: $style
+		src: url('#{$file-path}.eot')
+		src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.ttf') format('truetype')
+
+=clearfix()
+	&::after
+		display: block
+		content: ""
+		clear: both
+
+=gradientLine()
+	content: ''
+	display: block
+	height: 3px
+	background-color:  #1c667a
+	background: linear-gradient(90deg, rgba(28, 102, 122, 0.95) 0%, rgba(246, 250, 254, 0.95) 0%, rgba(216, 216, 216, 0.95) 0%, rgba(242, 246, 250, 0.95) 0%, rgba(182, 206, 214, 0.95) 28%, rgba(28, 102, 122, 0.95) 48%, rgba(180, 204, 213, 0.95) 71%, rgba(242, 246, 250, 0.95) 100%)
+
+=inputBorder()
+	border: 1px solid #48cbe8
+	border-radius: 4px

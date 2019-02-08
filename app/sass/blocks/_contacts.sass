@@ -1,0 +1,26 @@
+.contacts
+	font-size: 17px
+	color: #ffffff
+	border-radius: 4px
+	overflow: hidden
+
+	&__item
+		padding: 10px 0 10px 43px
+		&.item-1
+			background: $accent_color
+			font-size: 21px
+			color: #fbfcfd
+			padding: 14px 0 10px 21px
+		&.item-2
+			background: #41b9d4
+		&.item-3
+			background: #48cbe8
+		&.item-4
+			background: #51daf8
+
+	&__link
+		display: block
+		&-text
+			margin-left: 10px
+		&:hover > .contacts__link-text
+			text-decoration: underline

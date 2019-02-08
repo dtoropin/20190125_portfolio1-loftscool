@@ -1,0 +1,32 @@
+.formAddProject
+	padding: 11px 22px 22px
+
+	&__item
+		margin-bottom: 14px
+
+	&__label
+		color: $menu_color
+		font-size: 17px
+		margin-bottom: 10px
+
+	&__text,
+	&__textarea
+		box-sizing: border-box
+		width: 100%
+		+inputBorder
+		padding: 9px 5px
+		font-size: 13px
+		line-height: 13px
+		outline: none
+		&::placeholder
+			color: #48cbe8
+		&.error
+			background-color: rgba(249, 126, 118, 0.33)
+			border: 1px solid #f97e76
+	&__textarea
+		height: 111px
+		resize: none
+
+	& .btn--proj
+		display: block
+		margin: 0 auto

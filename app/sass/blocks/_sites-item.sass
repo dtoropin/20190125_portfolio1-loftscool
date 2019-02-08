@@ -1,0 +1,39 @@
+.sites-item
+	width: 183px
+	text-align: center
+	margin-bottom: 44px
+
+	&__img
+		position: relative
+		width: 183px
+		height: 129px
+		border: 2px solid $accent_color
+		border-radius: 4px
+		overflow: hidden
+		margin-bottom: 11px
+		&:hover > .sites-item__overlay
+			display: block
+
+	&__title
+		font-family: $firasans_lightitalic
+		font-size: 13px
+		color: $accent_color
+		margin-bottom: 15px
+
+	&__description
+		color: $base_color
+
+	&__overlay
+		display: none
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(1, 108, 164, 0.75)
+
+		& > .btn-sites
+			position: absolute
+			top: 50%
+			left: 30%
+			transform: translateY(-50%)

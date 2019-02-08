@@ -1,0 +1,24 @@
+.formLogin
+	width: 424px
+	margin: 0 auto
+	&__label
+		color: #959aa8
+		font-size: 36px
+		line-height: 36px
+		margin-bottom: 19px
+	&__name,
+	&__pass
+		box-sizing: border-box
+		width: 100%
+		font-size: 17px
+		line-height: 17px
+		background-color: white
+		+inputBorder
+		padding: 17px 20px 16px
+		outline: none
+		margin-bottom: 24px
+		&::placeholder
+			color: #48cbe8
+		&.error
+			background-color: rgba(249, 126, 118, 0.33)
+			border: 1px solid #f97e76
