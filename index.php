@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 
 require_once 'vendor/autoload.php';
 
@@ -28,6 +29,14 @@ $router->respond('GET', '/auth/?', function () use ($templater, $config) {
 	$data['logger'] = true;
 	$data['title'] = 'Страница авторизации';
 	return $templater->display('pages/auth', $data);
+});
+
+$router->respond('GET', '404', function () use ($templater, $config) {
+	$data = array();
+	$data['config'] = $config;
+	$data['logger'] = true;
+	$data['title'] = 'Страница не найдена';
+	return $templater->display('pages/404', $data);
 });
 
 $router->respond('GET', '/?', function () use ($templater, $config) {

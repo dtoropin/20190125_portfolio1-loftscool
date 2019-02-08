@@ -1,0 +1,15 @@
+{% extends 'main_template.twig' %}
+
+{% block top_css %}
+	<link rel="stylesheet" href="{{ config.base_url }}dist/css/404.min.css">
+{% endblock %}
+
+{% block authform %}
+	<section class="pageNotFound">
+		<div class="pageNotFound-block">
+			<h2 class="pageNotFound-block__head">404</h2>
+			<p class="pageNotFound-block__text">Page not found...</p>
+			<a href="/" class="pageNotFound-block__link">На главную..</a>
+		</div><!-- .pageNotFound-block -->
+	</section><!-- .pageNotFound -->
+{% endblock %}
