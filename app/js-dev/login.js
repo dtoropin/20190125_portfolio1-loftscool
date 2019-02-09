@@ -1,13 +1,15 @@
 // login.js for login.html
 var login = (function () {
 
+	var _form = $('.formLogin');
+
 	var init = function () {
 		_setUpListners();
 	};
 
 	var _setUpListners = function () {
-		$('.formLogin').on('submit', _loginSend);
-		$('.formLogin').find('input').on('input', _onInput);
+		_form.on('submit', _loginSend);
+		_form.find('input').on('input', _onInput);
 	};
 
 	var _onInput = function (e) {
@@ -19,14 +21,14 @@ var login = (function () {
 		e.preventDefault();
 
 		var form = $(this),
-			url = 'auth.php';
+			url = '/php/auth.php';
 
 		if (!workingForms.validate(form)) return false;
 
 		workingForms.ajaxSendNoFile(form, url)
 			.done(function () {
 				console.log("success");
-				window.location.href = './projects.html';
+				window.location.href = '/projects';
 			})
 			.fail(function () {
 				console.log("error");

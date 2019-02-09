@@ -1,7 +1,8 @@
-// addProlect for projects.html
+// addProject for projects.html
 var addProject = (function () {
 
-	var _MODAL = null;
+	var _MODAL = null,
+		_form = $('.formAddProject');
 
 	var init = function () {
 		_setUpListners();
@@ -10,8 +11,8 @@ var addProject = (function () {
 
 	var _setUpListners = function () {
 		$('.sites-add__link').on('click', _showModal);
-		$('.formAddProject').on('submit', _addProject);
-		$('.formAddProject').find('input, textarea').on('input', _onInput);
+		_form.on('submit', _addProject);
+		_form.find('input, textarea').on('input', _onInput);
 		$('.addProject-title__close').on('click', _resetForm);
 	};
 
@@ -39,7 +40,7 @@ var addProject = (function () {
 	var _addProject = function (e) {
 		e.preventDefault();
 		var form = $(this),
-			url = 'addProject.php';
+			url = '/php/addProject.php';
 
 		if (!workingForms.validate(form)) return false;
 
@@ -53,6 +54,7 @@ var addProject = (function () {
 					modalClose: false,
 					autoClose: 2000
 				});
+				window.location.href = '/projects';
 			})
 			.fail(function () {
 				console.log("error");

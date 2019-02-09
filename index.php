@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+//error_reporting(0);
 
 require_once 'vendor/autoload.php';
 
@@ -8,7 +8,9 @@ $templater = Templater::getInstance();
 $config = include_once 'config/config.php';
 
 $router->respond('GET', '/portfolio/?', function () use ($templater, $config) {
+	ORM::configure('sqlite:./database/portfolio.db');
 	$data = array();
+	$data['results'] = ORM::for_table('project')->find_many();
 	$data['config'] = $config;
 	$data['active'] = 'portfolio';
 	$data['title'] = 'Страница портфолио';

@@ -1,14 +1,16 @@
 // writeMe for writeme.html
 var writeMe = (function () {
 
+	var _form = $('.formWriteme');
+
 	var init = function () {
 		_setUpListners();
 	};
 
 	var _setUpListners = function () {
-		$('.formWriteme').on('submit', _sendForm);
-		$('.formWriteme').find('input, textarea').on('input', _onInput);
-		$('.formWriteme').on('reset', _resetForm);
+		_form.on('submit', _sendForm);
+		_form.find('input, textarea').on('input', _onInput);
+		_form.on('reset', _resetForm);
 	};
 
 	var _resetForm = function() {
@@ -24,14 +26,14 @@ var writeMe = (function () {
 		e.preventDefault();
 
 		var form = $(this),
-			url = 'contactme.php';
+			url = '/php/contactme.php';
 
 		if (!workingForms.validate(form)) return false;
 
 		workingForms.ajaxSendNoFile(form, url)
 			.done(function () {
 				console.log("success");
-				$('.formWriteme').trigger('reset');
+				_form.trigger('reset');
 				$('.alertAdd').bPopup({
 					modalClose: false,
 					autoClose: 2000

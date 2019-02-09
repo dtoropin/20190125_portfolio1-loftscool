@@ -172,8 +172,8 @@
     .sites-item__overlay > .btn-sites {
       position: absolute;
       top: 50%;
-      left: 30%;
-      transform: translateY(-50%); }
+      left: 50%;
+      transform: translate(-50%, -50%); }
 
 .sites-add__link {
   display: block;
