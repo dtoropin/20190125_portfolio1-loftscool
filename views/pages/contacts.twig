@@ -1,7 +1,7 @@
 {% extends 'main_template.twig' %}
 
 {% block top_css %}
-	<link rel="stylesheet" href="{{ config.base_url }}dist/css/writeme.min.css">
+	<link rel="stylesheet" href="{{ config.base_url }}build/css/writeme.min.css">
 {% endblock %}
 
 {% block content %}
@@ -44,7 +44,9 @@
 			<div class="formWriteme__item">
 				<p class="formWriteme__label">Введите код, указанный на картинке</p>
 				<div class="formWriteme__combo">
-					<div class="formWriteme__captcha"></div>
+					<div class="formWriteme__captcha">
+						<img src="{{ config.base_url }}php/captcha.php" alt="captcha">
+					</div>
 					<input type="text" name="captcha"
 								 class="formWriteme__captchatext"
 								 placeholder="Введите код"
@@ -67,7 +69,7 @@
 	<section class="alertAdd">
 		<div class="alertAdd__text">
 			<span class="alertAdd__close b-close">
-				<img src="{{ config.base_url }}dist/img//alertAdd-close.png" alt="close">
+				<img src="{{ config.base_url }}build/img//alertAdd-close.png" alt="close">
 			</span>
 			<h3 class="alertAdd__head">Спасибо!</h3>
 			<p class="alertAdd__mes">Ваше сообщение отправлено!</p>
@@ -77,6 +79,7 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="{{ config.base_ul }}dist/js/vendor-min.js"></script>
-<script src="{{ config.base_ul }}dist/js/writeme-min.js"></script>
+<script src="{{ config.base_ul }}build/js/vendor.min.js"></script>
+<script src="{{ config.base_ul }}build/js/workingForms.min.js"></script>
+<script src="{{ config.base_ul }}build/js/writeme.min.js"></script>
 {% endblock %}

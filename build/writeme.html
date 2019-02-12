@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- SEO -->
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!-- favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<!-- ie -->
+	<script src="./libs/modernizr.js"></script>
+	<!-- css -->
+	<link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="./css/writeme.min.css">
+	<title>Contacts</title>
+</head>
+<body>
+	<div class="content">
+		<header class="header">
+			<div class="header__wrap">
+				<div class="logo">
+					<a href="index.html">
+						<img src="./img/logo.png" alt="logo" class="logo__img">
+					</a>
+				</div><!-- .logo -->
+				<ul class="social">
+					<li class="social__item">
+						<a href="#" class="social__link icon--vk"></a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link icon--tw"></a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link icon--facebook"></a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link icon--github"></a>
+					</li>
+				</ul><!-- .social -->
+			</div>
+		</header>
+
+		<div class="wrapper">
+			<aside class="aside">
+				<nav class="aside__menu">
+					<ul class="menu">
+						<li class="menu__item">
+							<a href="index.html" class="menu__link">Обо мне</a>
+						</li>
+						<li class="menu__item">
+							<a href="projects.html" class="menu__link">Мои работы</a>
+						</li>
+						<li class="menu__item active">
+							<a href="#" class="menu__link">Связаться со мной</a>
+						</li>
+					</ul>
+				</nav><!-- .aside__menu -->
+
+				<div class="aside__contacts">
+					<ul class="contacts">
+						<li class="contacts__item item-1">Контакты</li>
+						<li class="contacts__item item-2">
+							<a href="mailto:pochta@mail.ru" class="contacts__link">
+								<i class="icon-mail"></i>
+								<span class="contacts__link-text">pochta@mail.ru</span>
+							</a>
+						</li>
+						<li class="contacts__item item-3">
+							<a href="tel:+79812342323" class="contacts__link">
+								<i class="icon-phone"></i>
+								<span class="contacts__link-text">+79812342323</span>
+							</a>
+						</li>
+						<li class="contacts__item item-4">
+							<a href="skype:username?call" class="contacts__link">
+								<i class="icon-skype"></i>
+								<span class="contacts__link-text">nickname</span>
+							</a>
+						</li>
+					</ul>
+				</div><!-- .aside__contacts -->
+			</aside>
+
+			<main class="main">
+				<section class="writeme">
+					<div class="writeme-title">
+						<h2 class="writeme-title__head">У вас интересный проект? Напишите мне</h2>
+					</div><!-- .writeme-title -->
+
+					<form action="#" class="formWriteme">
+						<div class="formWriteme__combo">
+							<div class="formWriteme__item formWriteme__item--half">
+								<p class="formWriteme__label">Имя</p>
+								<input type="text" name="name" 
+									class="formWriteme__name" 
+									placeholder="Как к Вам обращаться" 
+									qtip-content="Вы не ввели имя"
+								autofocus>
+							</div><!-- .formWriteme__item -->
+							
+							<div class="formWriteme__item formWriteme__item--half">
+								<p class="formWriteme__label">Email</p>
+								<input type="email" name="email" 
+									class="formWriteme__email" 
+									placeholder="Куда мне писать"
+									qtip-content="Вы не ввели email"
+									qtip-position="right"
+								>
+							</div><!-- .formWriteme__item -->
+						</div><!-- .formWriteme__combo -->
+						
+						<div class="formWriteme__item">
+							<p class="formWriteme__label">Сообщение</p>
+							<textarea name="text" 
+								class="formWriteme__text" 	
+								placeholder="Кратко в чем суть"
+								qtip-content="Ваш вопрос"
+							></textarea>
+						</div><!-- .formWriteme__item -->
+						
+						<div class="formWriteme__item">
+							<p class="formWriteme__label">Введите код, указанный на картинке</p>
+							<div class="formWriteme__combo">
+								<div class="formWriteme__captcha"></div>
+								<input type="text" name="captcha" 
+									class="formWriteme__captchatext" 
+									placeholder="Введите код"
+									qtip-content="Вы не ввели код"
+									qtip-position="right"
+								>
+							</div><!-- .formWriteme__combo -->
+						</div><!-- .formWriteme__item -->
+						
+						<div class="formWriteme__item formWriteme__combo">
+							<button type="submit" class="btn">Отправить</button>
+							<button type="reset" class="btn btn--reset">Очистить</button>
+						</div><!-- .formWriteme__item -->
+					</form>
+				</section><!-- .writeme -->
+			</main><!--.main  -->
+		</div><!-- .wrapper -->		
+
+	</div><!-- .content -->
+
+	<!-- modal -->
+	<section class="alertAdd">
+		<div class="alertAdd__text">
+			<span class="alertAdd__close b-close">
+				<img src="./img/alertAdd-close.png" alt="close">
+			</span>
+			<h3 class="alertAdd__head">Спасибо!</h3>
+			<p class="alertAdd__mes">Ваше обращение отослано.</p>
+		</div><!-- .alertAdd__text -->
+	</section><!-- .alertAdd -->
+	<!-- end modal -->
+
+	<footer class="footer">
+		<div class="footer__wrap">
+			<div class="footer__lock">
+				<a href="login.html" class="footer__lock-link"></a>
+			</div>
+			<div class="footer__copy">
+				<p class="footer__copy-text">
+					© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его
+				</p>
+			</div>
+		</div>
+	</footer><!-- .footer -->
+	<script src="./js/vendor-min.js"></script>
+	<script src="./js/writeme-min.js"></script>
+</body>
+</html>

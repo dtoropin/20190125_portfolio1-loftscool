@@ -33,7 +33,7 @@ $router->respond('GET', '/auth/?', function () use ($templater, $config) {
 	return $templater->display('pages/auth', $data);
 });
 
-$router->respond('GET', '404', function () use ($templater, $config) {
+$router->respond('GET', '/404/?', function () use ($templater, $config) {
 	$data = array();
 	$data['config'] = $config;
 	$data['logger'] = true;
