@@ -84,8 +84,11 @@ for ($i = 0; $i < $par['CHARS_COUNT']; $i++) {
 // Посылаем сформированный рисунок в браузер и избавляемся от него
 header("Content-Type: image/png");
 // сохраним капчу в сессии
-session_start();
-$_SESSION['imgcaptcha_'] = md5($code);
+//session_start();
+//$_SESSION['imgcaptcha_'] = md5($code);
+
+// сохраним капчу в куки
+setcookie('imgcaptcha_', md5($code), time() + 600, '/');
 
 imagepng($img);
 imagedestroy($img);

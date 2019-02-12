@@ -86,6 +86,9 @@
 				<section class="writeme">
 					<div class="writeme-title">
 						<h2 class="writeme-title__head">У вас интересный проект? Напишите мне</h2>
+						<div class="writeme-title__error">
+							Сообщение не отправлено, ошибка на сервере..
+						</div>
 					</div><!-- .writeme-title -->
 
 					<form action="#" class="formWriteme">
@@ -122,7 +125,9 @@
 						<div class="formWriteme__item">
 							<p class="formWriteme__label">Введите код, указанный на картинке</p>
 							<div class="formWriteme__combo">
-								<div class="formWriteme__captcha"></div>
+								<div class="formWriteme__captcha">
+									<img src="" alt="captcha" class="formWriteme__captcha-code">
+								</div>
 								<input type="text" name="captcha" 
 									class="formWriteme__captchatext" 
 									placeholder="Введите код"
@@ -167,7 +172,8 @@
 			</div>
 		</div>
 	</footer><!-- .footer -->
-	<script src="./js/vendor-min.js"></script>
-	<script src="./js/writeme-min.js"></script>
+	<script src="./js/vendor.min.js"></script>
+	<script src="./js/workingForms.min.js"></script>
+	<script src="./js/writeme.min.js"></script>
 </body>
 </html>

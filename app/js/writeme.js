@@ -13,8 +13,10 @@ var writeMe = (function () {
 		_form.on('reset', _resetForm);
 	};
 
-	var _resetForm = function() {
+	var _resetForm = function () {
 		workingForms.resetErrorForm($(this));
+		$('.writeme-title__error').hide();
+		$('.formWriteme__captcha-code').attr('src', "php/captcha.php?id=' + (+new Date());");
 	};
 
 	var _onInput = function (e) {
@@ -32,7 +34,6 @@ var writeMe = (function () {
 
 		workingForms.ajaxSendNoFile(form, url)
 			.done(function () {
-				console.log("success");
 				_form.trigger('reset');
 				$('.alertAdd').bPopup({
 					modalClose: false,
@@ -40,7 +41,7 @@ var writeMe = (function () {
 				});
 			})
 			.fail(function () {
-				console.log("error");
+				$('.writeme-title__error').show();
 			});
 	};
 

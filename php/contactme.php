@@ -1,10 +1,10 @@
 <?php
-session_start();
-if ($_SESSION['imgcaptcha_'] != md5($_POST['captcha'])) die(false);
+//session_start();
+//if ($_SESSION['imgcaptcha_'] != md5($_POST['captcha'])) die(false);
+if ($_COOKIE['imgcaptcha_'] != md5($_POST['captcha'])) die(false);
 
 /* Устанавливаем e-mail Кому будут приходить письма */
 $to = 'free73@list.ru';
-
 /* Указываем переменные, в которые будет записываться информация с формы */
 $name = htmlspecialchars($_POST['name']);
 $email = htmlspecialchars($_POST['email']);
@@ -17,8 +17,7 @@ if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)) {
 }
 
 /* Переменная, которая будет отправлена на почту со значениями, вводимых в поля */
-$mail_mes = "Здравствуйте!\r\n
-Было отправлено сообщение с сайта!\r\n 
+$mail_mes = "Сообщение с сайта!\r\n
 Имя отправителя: $name\r\n
 E-mail: $email\r\n
 Текст сообщения: $message";

@@ -45,6 +45,13 @@ var workingForms = (function () {
 
 	};
 
+	var _getCookie = function (name) {
+		var matches = document.cookie.match(new RegExp(
+			"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+		));
+		return matches ? decodeURIComponent(matches[1]) : undefined;
+	};
+
 	var resetErrorForm = function (form) {
 		$('.qtip').hide();
 		form.find('input, textarea').not('input[type="hidden"]').removeClass('error');
@@ -58,7 +65,8 @@ var workingForms = (function () {
 			var pos = val.hasAttribute('qtip-position')
 				? val.getAttribute('qtip-position')
 				: 'left';
-			if (val.value.length === 0) {
+			// (val.getAttribute('name') === 'captcha' && md5(val.value) !== _getCookie('imgcaptcha_'))
+			if (val.value.length === 0 || (val.getAttribute('name') === 'captcha' && md5(val.value) !== _getCookie('imgcaptcha_'))) {
 				val.classList.add('error');
 				_createQtip($(val), pos);
 				valid = false;

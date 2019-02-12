@@ -8,6 +8,9 @@
 	<section class="writeme">
 		<div class="writeme-title">
 			<h2 class="writeme-title__head">У вас интересный проект? Напишите мне</h2>
+			<div class="writeme-title__error">
+				Сообщение не отправлено, ошибка..
+			</div>
 		</div><!-- .writeme-title -->
 
 		<form action="#" class="formWriteme">
@@ -45,7 +48,7 @@
 				<p class="formWriteme__label">Введите код, указанный на картинке</p>
 				<div class="formWriteme__combo">
 					<div class="formWriteme__captcha">
-						<img src="{{ config.base_url }}php/captcha.php" alt="captcha">
+						<img src="{{ config.base_url }}php/captcha.php" alt="captcha" class="formWriteme__captcha-code">
 					</div>
 					<input type="text" name="captcha"
 								 class="formWriteme__captchatext"
@@ -69,7 +72,7 @@
 	<section class="alertAdd">
 		<div class="alertAdd__text">
 			<span class="alertAdd__close b-close">
-				<img src="{{ config.base_url }}build/img//alertAdd-close.png" alt="close">
+				<img src="{{ config.base_url }}build/img/alertAdd-close.png" alt="close">
 			</span>
 			<h3 class="alertAdd__head">Спасибо!</h3>
 			<p class="alertAdd__mes">Ваше сообщение отправлено!</p>
@@ -79,7 +82,7 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="{{ config.base_ul }}build/js/vendor.min.js"></script>
-<script src="{{ config.base_ul }}build/js/workingForms.min.js"></script>
-<script src="{{ config.base_ul }}build/js/writeme.min.js"></script>
+<script src="{{ config.base_url }}build/js/vendor.min.js"></script>
+<script src="{{ config.base_url }}build/js/workingForms.min.js"></script>
+<script src="{{ config.base_url }}build/js/writeme.min.js"></script>
 {% endblock %}

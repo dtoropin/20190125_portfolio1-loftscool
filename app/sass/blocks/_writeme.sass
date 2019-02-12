@@ -2,6 +2,7 @@
 	padding-bottom: 36px
 	overflow: hidden
 	&-title
+		position: relative
 		border-bottom: 17px solid #67dffa
 		margin-bottom: 47px
 		&__head
@@ -12,3 +13,15 @@
 			padding: 49px 0 45px
 			background-color: #48cbe8
 			text-align: center
+		&__error
+			display: none
+			position: absolute
+			bottom: -50px
+			left: 50%
+			transform: translateX(-50%)
+			white-space: nowrap
+			padding: 5px 20px
+			background-color: rgba(249, 126, 118, 0.33)
+			border: 1px solid #f97e76
+			border-radius: 4px
+			color: #f97e76
