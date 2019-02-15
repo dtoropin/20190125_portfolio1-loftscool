@@ -12,7 +12,7 @@ var login = (function () {
 		_form.find('input').on('input', _onInput);
 	};
 
-	var _onInput = function (e) {
+	var _onInput = function () {
 		var el = $(this);
 		if (el.hasClass('error')) el.removeClass('error');
 	};

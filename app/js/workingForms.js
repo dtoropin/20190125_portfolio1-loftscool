@@ -65,7 +65,7 @@ var workingForms = (function () {
 			var pos = val.hasAttribute('qtip-position')
 				? val.getAttribute('qtip-position')
 				: 'left';
-			// (val.getAttribute('name') === 'captcha' && md5(val.value) !== _getCookie('imgcaptcha_'))
+			
 			if (val.value.length === 0 || (val.getAttribute('name') === 'captcha' && md5(val.value) !== _getCookie('imgcaptcha_'))) {
 				val.classList.add('error');
 				_createQtip($(val), pos);

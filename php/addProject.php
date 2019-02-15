@@ -8,7 +8,6 @@ if (!is_dir($upload)) mkdir($upload, 0777);
 
 //сохраняем наш файл на сервер в папку $upload
 if (!empty($_FILES['file']['tmp_name'])) {
-	// $path = $_SERVER['DOCUMENT_ROOT'].'/upload/'.$_FILES['file']['name']; 
 	$path = $upload . $_FILES['file']['name'];
 	(copy($_FILES['file']['tmp_name'], $path))
 		? $file_name = $_FILES['file']['name']

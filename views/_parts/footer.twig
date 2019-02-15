@@ -1,8 +1,20 @@
 <footer class="footer">
 	<div class="footer__wrap">
-		<div class="footer__lock">
-			<a href="/auth" class="footer__lock-link"></a>
-		</div>
+		{% if auth == false %}
+			<div class="footer__lock entrance">
+				<a href="/auth"
+					 class="footer__lock-link"
+					 title="Вход"
+				></a>
+			</div>
+		{% else %}
+			<div class="footer__lock entrance">
+				<a href="{{ config.base_url }}php/auth.php?del"
+					 class="footer__lock-link"
+					 title="Logout"
+				></a>
+			</div>
+		{% endif %}
 		<div class="footer__copy">
 			<p class="footer__copy-text">
 				© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его

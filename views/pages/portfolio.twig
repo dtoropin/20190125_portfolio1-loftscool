@@ -23,19 +23,22 @@
 			</div><!-- .sites-item -->
 			{% endfor %}
 
-			<div class="sites-add">
-				<div class="sites-add__block">
-					<a href="#" class="sites-add__link">
-						<img src="{{ config.base_url }}build/img/add-site.png" alt="add" class="sites-add__img">
-						<span class="sites-add__text">Добавить проект</span>
-					</a>
-				</div>
-			</div><!-- .sites-add -->
+			{% if auth == true %}
+				<div class="sites-add">
+					<div class="sites-add__block">
+						<a href="#" class="sites-add__link">
+							<img src="{{ config.base_url }}build/img/add-site.png" alt="add" class="sites-add__img">
+							<span class="sites-add__text">Добавить проект</span>
+						</a>
+					</div>
+				</div><!-- .sites-add -->
+			{% endif %}
 		</div><!-- .sites -->
 	</section><!-- .projects -->
 {% endblock %}
 
 {% block modal %}
+	{% if auth == true %}
 	<!-- modal -->
 	<section class="addProject">
 		<div class="addProject-title">
@@ -108,10 +111,13 @@
 		</div><!-- .alertAdd__text -->
 	</section><!-- .alertAdd -->
 	<!-- end modal -->
+	{% endif %}
 {% endblock %}
 
 {% block scripts %}
+	{% if auth == true %}
 	<script src="{{ config.base_url }}build/js/vendor.min.js"></script>
 	<script src="{{ config.base_url }}build/js/workingForms.min.js"></script>
 	<script src="{{ config.base_url }}build/js/projects.min.js"></script>
+	{% endif %}
 {% endblock %}
