@@ -19,7 +19,7 @@ var writeMe = (function () {
 		$('.formWriteme__captcha-code').attr('src', "php/captcha.php?id=' + (+new Date());");
 	};
 
-	var _onInput = function (e) {
+	var _onInput = function () {
 		var el = $(this);
 		if (el.hasClass('error')) el.removeClass('error');
 	};
@@ -33,12 +33,22 @@ var writeMe = (function () {
 		if (!workingForms.validate(form)) return false;
 
 		workingForms.ajaxSendNoFile(form, url)
-			.done(function () {
-				_form.trigger('reset');
-				$('.alertAdd').bPopup({
-					modalClose: false,
-					autoClose: 2000
-				});
+			.done(function (result) {
+				if (result.ans === 'OK') {
+					_form.trigger('reset');
+					$('.alertAdd').bPopup({
+						modalClose: false,
+						autoClose: 2000
+					});
+				} else {
+					result.field.forEach(function (type) {
+						form.find("input[name='" + type + "']").addClass('err');
+						if(type === 'captcha') {
+							form.find("input[name='" + type + "']").val('');
+						}
+					});
+					workingForms.validate(form);
+				}
 			})
 			.fail(function () {
 				$('.writeme-title__error').show();

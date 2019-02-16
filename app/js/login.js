@@ -13,6 +13,7 @@ var login = (function () {
 	};
 
 	var _onInput = function () {
+		$('.login-block__error').hide();
 		var el = $(this);
 		if (el.hasClass('error')) el.removeClass('error');
 	};
@@ -26,12 +27,21 @@ var login = (function () {
 		if (!workingForms.validate(form)) return false;
 
 		workingForms.ajaxSendNoFile(form, url)
-			.done(function () {
-				console.log("success");
-				window.location.href = '/portfolio';
+			.done(function (result) {
+				if(result.ans === 'OK') {
+					window.location.href = '/portfolio';
+				} else {
+					result.field.forEach(function (type) {
+						form.find("input[name='" + type + "']").addClass('err');
+						if(type === 'pass') {
+							form.find("input[name='" + type + "']").val('');
+						}
+					});
+					workingForms.validate(form);
+				}
 			})
 			.fail(function () {
-				console.log("error");
+				$('.login-block__error').show();
 			});
 	};
 

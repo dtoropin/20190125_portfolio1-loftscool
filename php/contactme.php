@@ -1,7 +1,10 @@
 <?php
-//session_start();
-//if ($_SESSION['imgcaptcha_'] != md5($_POST['captcha'])) die(false);
-if ($_COOKIE['imgcaptcha_'] != md5($_POST['captcha'])) die(false);
+$result['ans'] = 'OK';
+
+if ($_COOKIE['imgcaptcha_'] != md5(htmlspecialchars($_POST['captcha']))) {
+	$result['ans'] = 'NOK';
+	$result['field'][] = 'captcha';
+}
 
 /* Устанавливаем e-mail Кому будут приходить письма */
 $to = 'free73@list.ru';
@@ -13,8 +16,11 @@ $subject = 'Форма отправки сообщений с сайта'; // т
 
 /* Проверка правильного написания e-mail адреса */
 if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)) {
-	die(false);
+	$result['ans'] = 'NOK';
+	$result['field'][] = 'email';
 }
+
+if ($result['ans'] !== 'OK') die(json_encode($result));
 
 /* Переменная, которая будет отправлена на почту со значениями, вводимых в поля */
 $mail_mes = "Сообщение с сайта!\r\n
@@ -23,9 +29,9 @@ E-mail: $email\r\n
 Текст сообщения: $message";
 
 $charset = "utf-8";
-$headers ="Content-type: text/plain; charset=$charset\r\n"; // text/html ?
-$headers.="MIME-Version: 1.0\r\n";
-$headers.="Date: ".date('D, d M Y h:i:s O')."\r\n";
+$headers = "Content-type: text/plain; charset=$charset\r\n"; // text/html ?
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Date: " . date('D, d M Y h:i:s O') . "\r\n";
 
 /* Отправка сообщения, с помощью функции mail() */
-mail($to, $subject, $mail_mes, $headers) ? die(true) : die(false);
+mail($to, $subject, $mail_mes, $headers) ? die(json_encode($result)) : die(false);

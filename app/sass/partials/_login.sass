@@ -4,6 +4,7 @@
 	padding: 30px 0
 
 	&-block
+		position: relative
 		width: 590px
 		margin: 0 auto
 		text-align: center
@@ -13,12 +14,24 @@
 		overflow: hidden
 		&__head
 			border-bottom: 15px solid #67dffa
-			margin: 0 0 28px
+			margin: 0 0 44px
 			font-size: 40px
 			line-height: 40px
 			color: #ffffff
 			padding: 27px 0 24px
 			background-color: #48cbe8
+		&__error
+			display: none
+			position: absolute
+			top: 114px
+			left: 50%
+			transform: translateX(-50%)
+			white-space: nowrap
+			padding: 5px 20px
+			background-color: rgba(249, 126, 118, 0.33)
+			border: 1px solid #f97e76
+			border-radius: 4px
+			color: #f97e76
 
 .entrance
 	display: none
